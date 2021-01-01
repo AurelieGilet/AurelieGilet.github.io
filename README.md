@@ -1,2 +1,2 @@
 # portfolio_projects
-All projects made during training as a web developer.
+All projects made during my web developer training.
