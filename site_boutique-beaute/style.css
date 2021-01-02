@@ -1,0 +1,1026 @@
+/****************** RESET CSS *********************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, 
+ del, dfn, em, img, ins, kbd, q, s, samp, 
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/******************** FIN RESET ************************/ 
+/*************** PARTIE FLUID *************************/  
+.menu-checkbox, .menu-toggle, .responsive-aide
+{
+    display: none;
+}
+.container
+{
+    width: 80%;
+    margin: 0 auto;
+    font-family: 'Open_sans', sans-serif;
+}
+
+/************************ HEADER **************************/
+header
+{
+    width: 100%;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+}
+        /************** HAUT ******************/
+.haut
+{
+    width: 100%;
+    min-height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    
+}
+                /****** GAUCHE **********/
+.gauche
+{
+    min-width: 30%;
+    display: flex;
+}
+
+.logo
+{
+    min-width: 15%;
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titre
+{
+    min-width: 85%;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.titre h1
+{
+    font-size: 60px;
+    font-weight: bold;
+    font-style: italic;
+    height: 10vh;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 10vh;
+    white-space: nowrap;
+}
+
+.titre p
+{
+    font-size: 18px;
+    color:#F583E3;
+    height: 5vh;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 5vh;
+    white-space: nowrap;
+}
+
+                /******* MILIEU ************/
+.milieu
+{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.milieu h2
+{
+    font-size: 45px;
+    color: #3FC9FA;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 6vh;
+    height: 6vh;
+    white-space: nowrap;
+}
+
+.aide
+{
+    position: relative;
+    text-align: center;
+}
+
+.numero
+{
+    font-size: 30px;
+    color: #3FC9FA;
+    text-align: center;
+    position: absolute;
+    top: 4px;
+    left: 78px;
+    white-space: nowrap;
+}
+
+.milieu p
+{
+    font-size: 18px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 4vh;
+    height: 4vh;
+    white-space: nowrap;
+}
+
+                /********** DROITE **********/
+.droite
+{
+    min-width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.droite a
+{
+    text-decoration: none;
+}
+
+.compte
+{
+    width: 100%;
+    height: 5vh;
+    font-size: 26px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 5vh;
+    border-bottom: 1px solid white;
+    background-color: #3FC9FA;
+    white-space: nowrap;
+}
+
+.panier
+{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    border-top: 1px solid white;
+    background-color: #3FC9FA;
+    align-items: center;
+}
+
+.panier a
+{
+    width: 20%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.panier p
+{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 8vh;
+    width: 75%;
+    height: 8vh;
+    white-space: nowrap;
+}
+
+        /********************* NAV ********************/
+nav
+{
+    min-width: 100%;
+    min-height: 5vh;
+    background-color: #3FC9FA;    
+}
+nav ul
+{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+nav li 
+{
+    width: 25%;
+    height: 5vh;
+    list-style: none;
+    text-align: center;
+    line-height: 5vh;
+    vertical-align: middle;
+}
+nav li:hover
+{
+    background-color: #F583E3;
+}
+nav a
+{
+    text-decoration: none;
+    font-size: 19px;
+    color: white;
+    white-space: nowrap;
+}
+
+/**************************** MAIN ***************************/
+
+main
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+}
+
+.banniere
+{
+    margin-bottom: 1%;
+}
+
+.banniere img
+{
+    width: 100%;
+    height: auto;
+}
+
+        /***************** ASIDE ******************/
+aside
+{
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1%;
+}
+
+aside h3
+{
+    font-size: 19px;
+    font-weight: bold;
+    color: #3FC9FA;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 5vh;
+    width: 100%;
+    height: 5vh;
+}
+
+aside p
+{
+    font-size: 15px;
+    text-align: left;
+}
+
+.separateur
+{
+    width: 2px;
+    height: 18vh;
+    background-image: url('img/fond.png');
+}
+
+                /********** GAUCHE **********/
+.aside_gauche
+{
+    width: 24%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;  
+    padding-left: 1%;
+}
+
+.paiment
+{
+    width: 100%;
+    height: 10vh;
+    margin-bottom: 2%;
+}
+
+.img_cb
+{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+                /************ MILIEU **********/
+.aside_milieu
+{
+    width: 47%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;   
+}
+
+                /************ DROITE ************/
+.aside_droite
+{
+    width: 24%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;   
+}
+
+.livraison,.retours
+{
+    width: 100%;
+    min-height: 6vh;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.camion,.echange
+{
+    width: 25%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.livraison p,.retours p
+{
+    min-width: 70%;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 6vh;
+    white-space: nowrap;
+}
+
+        /********************* CONTENU *********************/
+.contenu
+{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+                /************** ARTICLES ****************/
+article
+{
+    width: 30%;
+    min-height: 25vh;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 5px;
+    box-shadow: 2px  2px 1px  rgb(190, 190, 190);
+}
+
+article h3
+{
+    font-size: 19px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 5vh;
+    width: 100%;
+    height: 5vh;
+    background-color: #D9D9D9;
+}
+
+.corps
+{
+    width: 100%;
+    min-height: 20vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.article_img
+{
+    width: 30%;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texte
+{
+    width: 60%;
+    height: 19vh;
+    display: flex;
+    flex-direction: column;
+}
+
+article p 
+{
+    width: 95%;
+    height: 15vh;
+    font-size: 15px;
+    text-align: justify;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article a
+{
+    width: 95%;
+    height: 3vh;
+    font-size: 18px;
+    font-weight: bold ;
+    color: #3FC9FA;
+    text-align: right;
+    vertical-align: middle;
+    line-height: 3vh;
+}
+
+/************************** FOOTER ****************************/
+footer
+{
+    width: 100%;
+    height: 5vh;
+    background-color: #3FC9FA;
+}
+
+.mentions
+{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    white-space: nowrap;  
+}
+
+.mentions a
+{
+    text-decoration: none;
+    font-size: 18px;
+    color: white;    
+}
+.mentions span
+{
+    font-size: 18px;
+    color: white;
+}
+
+/*********************** FIN PARTIE FLUID *******************/
+/************************************************************/
+/***************** PARTIE RESPONSIVE ************************/
+
+/********************** <= 1670px *************************/
+@media screen and (max-width: 1670px)
+{
+    /************************ HEADER **************************/
+    header
+    {
+        min-height: 15vh;
+    }
+            /************** HAUT ******************/
+    .haut
+    {
+        min-height: 10vh;    
+    }
+                    /****** GAUCHE **********/
+    .logo
+    {
+        min-width: 15%;
+        height: 7vh;
+    }
+    .logo img
+    {
+        width: 51px;
+        height: 59px;
+    }
+    .titre
+    {
+        height: 10vh;
+    }
+    .titre h1
+    {
+        font-size: 50px;
+        height: 6vh;
+        line-height: 6vh;
+    }
+    .titre p
+    {
+        font-size: 16px;
+        height: 4vh;
+        line-height: 4vh;
+    }
+
+                    /******* MILIEU ************/
+    .milieu h2
+    {
+        font-size: 30px;
+        height: 5vh;
+        line-height: 5vh;   
+    }
+    .aide img 
+    {
+        width: 190px;
+        height: 25px;
+    }
+    .numero
+    {
+        font-size: 20px;
+        top: 2px;
+        left: 45px;
+    }
+    .milieu p
+    {
+        font-size: 12px;
+        height: 3vh;
+        line-height: 3vh; 
+    }
+
+                    /********** DROITE **********/
+    .compte
+    {
+        height: 3vh;
+        font-size: 20px;
+        line-height: 3vh;
+    }
+    .panier
+    {
+        height: 6vh;
+    }
+    .panier a
+    {
+        height: 5vh;
+    }
+    .panier img
+    {
+        width: 55px;
+        height: 45px;
+    }
+    .panier p
+    {
+        font-size: 18px;
+        height: 6vh;
+        line-height: 6vh;
+    }
+    /********************* CONTENU *********************/
+    .contenu_gauche img 
+    {
+        width: 75px;
+        height: auto;
+    }
+    .contenu_milieu img 
+    {
+        width: 90px;
+        height: auto;
+    }
+    .contenu_droite img 
+    {
+        width: 90px;
+        height: auto;
+    }
+    /************************** FOOTER *******************************/
+    .mentions a, .mentions span
+    {
+        font-size: 14px;
+    }      
+}
+/*************************** <= 1200px *******************************/
+@media screen and (max-width: 1200px)
+{
+    /************************ HEADER **************************/
+    header
+    {
+        min-height: 10vh;
+    }
+            /************** HAUT ******************/
+    .haut
+    {
+        min-height: 8vh;    
+    }
+                    /****** GAUCHE **********/
+    .logo
+    {
+        min-width: 15%;
+        height: 5vh;
+    }
+    .logo img
+    {
+        width: 43px;
+        height: 51px;
+    }
+    .titre
+    {
+        height: 8vh;
+    }
+    .titre h1
+    {
+        font-size: 40px;
+        height: 5vh;
+        line-height: 5vh;
+    }
+    .titre p
+    {
+        font-size: 13px;
+        height: 3vh;
+        line-height: 3vh;
+    }
+                    /******* MILIEU ************/
+    .milieu h2
+    {
+        font-size: 25px;
+        height: 4vh;
+        line-height: 4vh;   
+    }
+    .aide img 
+    {
+        width: 150px;
+        height: 20px;
+    }
+    .numero
+    {
+        font-size: 15px;
+        top: 1px;
+        left: 40px;
+    }
+    .milieu p
+    {
+        font-size: 11px;
+        height: 2vh;
+        line-height: 2vh; 
+    }
+                    /********** DROITE **********/
+    .compte
+    {
+        height: 2vh;
+        font-size: 18px;
+        line-height: 2vh;
+    }
+    .panier
+    {
+        height: 5vh;
+    }
+
+    .panier a
+    {
+        height: 4vh;
+    }
+    .panier img
+    {
+        width: 50px;
+        height: 40px;
+    }
+    .panier p
+    {
+        font-size: 15px;
+        height: 5vh;
+        line-height: 5vh;
+    }
+            /********************* NAV ********************/
+    nav
+    {
+        min-height: 4vh;
+    }
+    nav a
+    {
+        width: 25%;
+        font-size: 15px;
+    }
+            /***************** ASIDE ******************/
+    aside, .aside_gauche, .aside_milieu, .aside_droite
+    {
+        height: 15vh;
+    }
+    aside h3
+    {
+        font-size: 15px;
+        line-height: 4vh;
+        height: 4vh;
+    }
+    aside p
+    {
+        font-size: 12px;
+    }
+    .separateur
+    {
+        height: 13vh;
+    }
+                    /********** GAUCHE **********/
+    .paiment
+    {
+        height: 8vh;
+    }
+    .img_cb
+    {
+        height: 4vh;
+    }   
+    .aside_gauche img
+    {
+        width: 150px;
+        height: 25px;
+    }
+                    /************ DROITE ************/
+    .livraison,.retours
+    {
+        min-height: 5vh;
+    }
+    .livraison p,.retours p
+    {
+        line-height: 5vh;
+    }
+    .aside_droite img 
+    {
+        width: 30px;
+        height: 30px;
+    }
+
+    /********************* CONTENU *********************/
+    article
+    {
+        min-height: 20vh;
+    }
+    article h3
+    {
+        font-size: 15px;
+        line-height: 4vh;
+        height: 4vh;
+    }
+    .corps
+    {
+        min-height: 16vh;
+    }
+    .article_img
+    {
+        height: 16vh;
+    }
+    
+    .texte
+    {
+        height: 15vh;
+    }
+    article p 
+    {
+        height: 12vh;
+        font-size: 12px;
+    }
+    article a
+    {
+        height: 2vh;
+        font-size: 15px;
+        line-height: 2vh;
+    }
+    .contenu_gauche img 
+    {
+        width: 65px;
+        height: auto;
+    }
+    .contenu_milieu img 
+    {
+        width: 75px;
+        height: auto;
+    }
+    .contenu_droite img 
+    {
+        width: 75px;
+        height: auto;
+    }
+    /************************** FOOTER *******************************/
+    .mentions a, .mentions span
+    {
+        font-size: 12px;
+    }    
+}
+/********************************* <= 992px ********************************/
+@media screen and (max-width: 992px)
+{
+    .container
+    {
+        width: 100%;
+    }
+}
+/********************************* <= 768px ********************************/
+@media screen and (max-width: 768px)
+{
+    .container
+    {
+        width: 100%;
+    }
+    .milieu, .banniere, aside 
+    {
+        display: none;
+    }
+    .droite p
+    {
+        display: none;
+    }
+    .compte
+    {
+        height: 2vh;
+        font-size: 18px;
+        line-height: 2vh;
+    }
+    .panier
+    {
+        justify-content: center;
+    }
+    .panier img
+    {
+        width: 50px;
+        height: 40px;
+    }
+    .panier p
+    {
+        display: none;
+    }
+    .contenu
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    article
+    {
+        width: 70%;
+        margin: 2%;
+    }
+    article h3
+    {
+        font-size: 19px;
+        line-height: 5vh;
+        height: 5vh;
+    }
+    .texte
+    {
+        width: 60%;
+        height: 19vh;
+    }
+
+    article p 
+    {
+        width: 95%;
+        height: 12vh;
+        font-size: 15px;
+    }
+
+    article a
+    {
+        width: 95%;
+        height: 3vh;
+        font-size: 18px;
+        line-height: 3vh;
+    }
+    .contenu_gauche img 
+    {
+        width: 75px;
+        height: auto;
+    }
+    .contenu_milieu img 
+    {
+        width: 90px;
+        height: auto;
+    }
+    .contenu_droite img 
+    {
+        width: 90px;
+        height: auto;
+    }
+    .responsive-aide
+    {
+        display: contents;
+        width: 70%;
+        align-self: center;
+        height: 5vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .responsive-aide h2
+    {
+        color: #3FC9FA;
+    }
+    .mentions
+    {
+        flex-wrap: wrap;
+    }
+}
+
+/********************************* <= 576px ********************************/
+@media screen and (max-width: 576px)
+{
+    .container
+    {
+        width: 100%;
+    }
+    .menu, .milieu, .banniere, aside 
+    {
+        display: none;
+    }
+        /********** Menu Burger ***********/
+    .menu-checkbox, .menu-toggle
+    {
+        display: contents;
+    }   
+    .menu-checkbox:checked ~ .menu 
+    {
+        display: block;
+    }
+    .menu-checkbox
+    {
+        opacity: 0;
+        position: absolute;
+        top: -1000px;
+    }
+    .menu-toggle img
+    {
+        padding: 1%;
+    }
+        /********** Fin Menu Burger *********/
+    .droite p
+    {
+        display: none;
+    }
+    .compte
+    {
+        height: 2vh;
+        font-size: 18px;
+        line-height: 2vh;
+    }
+    .panier
+    {
+        justify-content: center;
+    }
+    .panier img
+    {
+        width: 50px;
+        height: 40px;
+    }
+    .panier p
+    {
+        display: none;
+    }
+    .contenu
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    article
+    {
+        width: 70%;
+        margin: 2%;
+    }
+    article h3
+    {
+        font-size: 19px;
+        line-height: 5vh;
+        height: 5vh;
+    }
+    .texte
+    {
+        width: 60%;
+        height: 19vh;
+    }
+
+    article p 
+    {
+        width: 95%;
+        height: 15vh;
+        font-size: 15px;
+    }
+
+    article a
+    {
+        width: 95%;
+        height: 3vh;
+        font-size: 18px;
+        line-height: 3vh;
+    }
+    .responsive-aide
+    {
+        display: contents;
+        width: 70%;
+        align-self: center;
+        height: 5vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+ 
+    }
+    .responsive-aide h2
+    {
+        color: #3FC9FA;
+    }
+    .mentions
+    {
+        flex-wrap: wrap;
+    }
+    .mentions
+    {
+        flex-wrap: wrap;
+    }
+}
