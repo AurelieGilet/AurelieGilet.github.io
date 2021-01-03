@@ -20,7 +20,6 @@ time, mark, audio, video
     font: inherit;
     vertical-align: baseline;
 }
-
  /***************** MISE EN PAGE ********************/
 .container-fluid
 {
@@ -29,7 +28,6 @@ time, mark, audio, video
     font-family: 'Lato', sans-serif;
     color: #000000;
 }
-
 h1, h2, h3, h5, a, a:hover
 {
     font-family: 'Lancelot', cursive;
@@ -39,14 +37,11 @@ h1, h2, h3, h5, a, a:hover
     padding: 0 !important;
     margin: 0 ! important;
 } 
-
 body::-webkit-scrollbar 
 {
     display: none;
 }
-
         /********* HOVER EFFECT ******************/
-
 nav li:hover, .visit-button:hover, .article_contact img:hover, .bouton:hover, .carousel-control-next:hover, .carousel-control-prev:hover
 {    
     -webkit-animation-name: pulse;
@@ -92,9 +87,7 @@ nav li:hover, .visit-button:hover, .article_contact img:hover, .bouton:hover, .c
         transform: scale3d(1, 1, 1);
     }
 } 
-
-/******************* HEADER ********************/
-
+/********************************* HEADER ***********************************/
 header
 {
     position: fixed;
@@ -104,17 +97,14 @@ header
     height: 15vh;
     background-image: linear-gradient(to bottom, #39204a, #3c224d, #3e2550, #412754, #442a57, #482d5b, #4b305f, #4f3363, #543769, #5a3c6f, #5f4076, #65457c);
 }
-
 nav
 {
     height: 100%;   
 }
-
 nav ul
 {
     height: 100%;
 }
-
 nav li
 {
     list-style-type: none; 
@@ -122,19 +112,17 @@ nav li
     font-weight: bold;
     text-align: center;
 }
-
 nav li a
 {
     text-decoration: none !important;
     color: white;
 }
-
 nav li a:hover
 {
     color: white;    
 }
 
-/************************************ MAIN *********************/
+/************************************* MAIN ****************************************/
 main
 {
     display: flex;
@@ -142,14 +130,13 @@ main
     height: 100%;
     background-image: linear-gradient(to bottom, #65457c, #6b4a83, #714f8a, #775491, #7d5998, #815d9c, #8460a0, #8864a4, #8b67a6, #8d69a8, #906caa, #926fac);
 }    
-
 .page
 {
     height: 100vh;
     padding-top: 20vh;
     padding-bottom: 10vh;
 }
-            /********** ACCUEIL *********/
+        /****************** ACCUEIL *****************/
 .gradient_text
 {
     background-color: black;
@@ -182,7 +169,7 @@ main
     font-weight: bolder;
     text-align: center; 
 }
-            /********** A PROPOS ***********/
+        /************* A PROPOS ***************/
 .article_apropos
 {
     height: 100%;
@@ -203,7 +190,6 @@ main
 {
     font-size: 24px;
     margin-bottom: 1%;
-
 }
 .article_apropos a
 {
@@ -212,7 +198,7 @@ main
     font-weight: bold;
     font-size: 24px;
 }
-            /*********** PARCOURS ************/
+        /**************** PARCOURS ***************/
 .parcours
 {
     height: 100%;
@@ -279,17 +265,14 @@ main
     width: 85%;
     height: auto;
 }
-        /***** IMG INFOBULLE *****/
-
+            /********* IMG INFOBULLE *********/
 .infobulle 
 {
     position: relative;  /*les .infobulle deviennent référents*/
     cursor: help;
     border-radius: 50%;
 }
-
-/* on génère un élément :after lors du survol et du focus :*/
-
+    /* on génère un élément :after lors du survol et du focus :*/
 .infobulle:hover::after,
 .infobulle:focus::after 
 {
@@ -307,7 +290,6 @@ main
     font-size: 1.2rem;
 }
 /* on génère un second élément en :before pour la flèche */
-
 [aria-label]:hover:before,
 [aria-label]:focus:before {
   content: "▼";
@@ -318,12 +300,11 @@ main
   font-size: 20px;
   color: #370955;
 }
-
 /* pas de contour durant le :focus */
 [aria-label]:focus {
   outline: none;
 }
-        /********* FIN INFOBULLE ******/
+            /********* FIN INFOBULLE ******/
 .experience
 {
     width: 100%;
@@ -334,9 +315,7 @@ main
     font-size: 25px;
     text-align: center;
 }
-
-            /************ PROJETS **************/
-
+        /**************** PROJETS *****************/
 #carousel
 {
     width: 80%;
@@ -345,7 +324,6 @@ main
 {
     position: relative;
 }
-
 .carousel-item:hover .carousel-caption 
 {
 	visibility: visible;
@@ -367,7 +345,6 @@ main
 	-o-transition: visibility 0s, opacity 0.2s linear;
 	transition: visibility 0s, opacity 0.2s linear;
 }
-
 .carousel-caption h5
 {
     font-size: 30px;
@@ -396,64 +373,54 @@ main
     font-weight: bold;
     color: #39204a;
 }
-
-
-            /*************** CONTACT *************/
-
+        /******************* CONTACT ******************/
 .article_contact
 {
     height: 90%;
     width: 100%;
 }
-
 .info
 {
     border: 2px solid;
     border-radius: 5px;
     box-shadow: 4px -4px 4px #27083b, inset 2px -2px 2px #27083b; 
 }
-
 .info img
 {
     width: 30%;
     height: auto;
 }
-
 .email, .linkedin, .github
 {
     width: 80%;
     height: 15vh;
 }
-
 .info a
 {
     text-decoration: none;
     color: #000000;
     width: 100%;
 }
-
 .article_contact h3
 {
     font-size: 30px;
     font-weight: bold;
     text-align: center;
 }
-
 /*************** FORMULAIRE (Sera intégré lorsque j'aurais appris JS et Ajax
 form
 {
     width: 100%;
     border: 2px solid;
     border-radius: 5px;
+    box-shadow: 4px -4px 4px #27083b, inset 2px -2px 2px #27083b; 
 }
-
 .article_contact h2
 {
     font-size: 45px;
     font-weight: bold;
     border-bottom: 2%;
 }
-
 .nom_prenom
 {
     width: 100%;
@@ -471,7 +438,6 @@ form
     font-size: 25px;
     font-family: 'Lancelot', cursive;
 }
-
 .mail
 {
     width: 100%;
@@ -485,42 +451,35 @@ form
     font-size: 25px;
     font-family: 'Lancelot', cursive;
 }
-
 .message
 {
     width: 100%;
     height: 25vh;
 }
-
 #message
 {
     width: 100%;
     height: 100%;
     font-size: 25px;
     font-family: 'Lancelot', cursive;
-    
 }
-
 input, textarea 
 {
     border: 4px solid  #39204a;
     border-radius: 10px;
     background-color: #e6cef7;
 }
-
 input:focus, textarea:focus
 {
     border: 4px solid  #39204a;
     border-radius: 10px;
     background-color: #e6cef7;
 }
-
 ::placeholder
 {
     color: #212529;
     opacity: 1;
 }
-
 .button
 {
     border: 4px solid  #39204a;
@@ -530,8 +489,8 @@ input:focus, textarea:focus
     font-family: 'Lancelot', cursive;
     font-size: 25px;
 }
- **************/
-
+ ***************************************************/
+/********************************* FOOTER ***************************/
 footer
 {
     position: fixed;
@@ -547,4 +506,17 @@ footer p
     font-weight: bold;
     color: white !important;
     padding-bottom: 1%;
+}
+/****************************************************************************/
+/****************************************************************************/
+/******************************* PARTIE RESPONSIVE **************************/
+
+/********************************* <= 992px *****************************/
+@media screen and (max-width:992px)
+{
+    nav li
+    {
+        font-size: 25px;
+    }
+
 }

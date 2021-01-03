@@ -322,10 +322,6 @@ footer
         /*********************** <=991px*********************/
 @media screen and (max-width: 991px)
 {
-    .container
-    {
-        width: 100%;
-    }
     .remise
     {
         font-size: 20px;
