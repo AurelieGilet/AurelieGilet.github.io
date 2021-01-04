@@ -111,6 +111,7 @@ nav li
     font-size: 30px;
     font-weight: bold;
     text-align: center;
+    white-space: nowrap;
 }
 nav li a
 {
@@ -133,7 +134,7 @@ main
 .page
 {
     height: 100vh;
-    padding-top: 20vh;
+    padding-top: 17vh;
     padding-bottom: 10vh;
 }
         /****************** ACCUEIL *****************/
@@ -174,10 +175,21 @@ main
 {
     height: 100%;
 }
-
+.photo
+{
+    width: 30%;
+    padding: 1%;
+}
+.texte
+{
+    width: 70%;
+}
 .article_apropos img
 {
     clip-path: ellipse(44% 50% at 50% 50%);
+    margin: 1%;
+    width: 100%;
+    height: auto;
 }
 
 .article_apropos h2
@@ -215,12 +227,38 @@ main
 }
 .formation, .competences
 {
-    height: 80%;
+    height: 100%;
     width: 100%;
     padding: 2%;
     border: 2px solid;
     border-radius: 5px;
-    box-shadow: 4px -4px 4px #27083b, inset 2px -2px 2px #27083b;   
+    box-shadow: 4px -4px 4px #27083b, inset 2px -2px 2px #27083b;
+}
+.languages
+{
+    width: 100%;
+    height: 42%;
+}
+.frameworks
+{
+    width: 100%;
+    height: 37%;
+}
+.competences ul
+{
+    width: 100%;
+    height: auto;
+}
+.languages li, .frameworks li
+{
+    width: 75px;
+    height: 75px;
+    margin: 1%;
+}
+.competences img
+{
+    width: 100%;
+    height: auto;
 }
 .parcours h2
 {
@@ -247,24 +285,18 @@ main
     font-size: 25px;
     list-style-type: none;    
 }
+.parcours p
+{
+    font-size: 25px;
+}
 .etudes p
 {
     font-size: 25px;
     text-align: justify;
-    padding: 3%;
+    padding: 1%;
     margin-bottom: 1vh;
 }
-.competences ul
-{
-    width: 100%;
-    height: 40%;
-    padding: 2%;
-}
-.competences img
-{
-    width: 85%;
-    height: auto;
-}
+
             /********* IMG INFOBULLE *********/
 .infobulle 
 {
@@ -387,8 +419,8 @@ main
 }
 .info img
 {
-    width: 30%;
-    height: auto;
+    width: 100px;
+    height: 100px;
 }
 .email, .linkedin, .github
 {
@@ -497,7 +529,7 @@ footer
     bottom: 0;
     left: 0;
     z-index: 10;
-    height: 15vh; 
+    height: 10vh; 
     
 }
 footer p
@@ -510,13 +542,159 @@ footer p
 /****************************************************************************/
 /****************************************************************************/
 /******************************* PARTIE RESPONSIVE **************************/
-
-/********************************* <= 992px *****************************/
-@media screen and (max-width:992px)
+/********************************* < 1200px *****************************/
+@media screen and (max-width: 1199px)
+{
+    #carousel
+    {
+        width: 95%;
+    }
+}
+/********************************* < 992px *****************************/
+@media screen and (max-width:991px)
 {
     nav li
     {
         font-size: 25px;
     }
-
+    /* A PROPOS */
+    .article_apropos
+    {
+        flex-direction: column;
+    }
+    .photo
+    {
+        height: 30%;
+        width: auto;
+    }
+    .article_apropos img
+    {
+        height: 100%;
+        width: auto;
+    }
+    .texte
+    {
+        width: 100%;
+        height: 70%;
+    }
+    .article_apropos h2
+    {
+        font-size: 35px;
+    }
+    .article_apropos p, .article_apropos a
+    {
+        font-size: 20px;
+    }
+    /* PARCOURS */
+    .parcours_top
+    {
+        height: 85%;
+    }
+    .parcours_bottom
+    {
+        height: 15%;
+    }
+    .parcours h2
+    {
+        font-size: 40px;
+    }
+    .parcours h3
+    {
+        font-size: 30px;
+    }
+    .parcours a, .parcours li, .parcours p
+    {
+        font-size: 25px;
+    }
+    /* PROJETS */
+    #carousel
+    {
+        width: 100%;
+    }
+    .visit-button
+    {
+        width: 40%; 
+    }
+}
+/*********************************** <= 768px **********************************/
+@media screen and (max-width:767px)
+{
+    /* A PROPOS */
+    .article_apropos
+    {
+        flex-direction: column;
+    }
+    .photo
+    {
+        height: 30%;
+        width: auto;
+    }
+    .texte
+    {
+        width: 100%;
+        height: 70%;
+    }
+    .article_apropos h2
+    {
+        font-size: 30px;
+    }
+    .article_apropos p, .article_apropos a
+    {
+        font-size: 18px;
+    }
+    /* PARCOURS */
+    .parcours_top
+    {
+        height: 85%;
+    }
+    .parcours_bottom
+    {
+        height: 15%;
+    }
+    .formation, .competences
+    {
+        height: 50%;
+        width: 100%;
+        margin-bottom: 2%;   
+    }
+    .parcours h2
+    {
+        font-size: 30px;
+    }
+    .parcours h3
+    {
+        font-size: 22px;
+    }
+    .parcours a, .parcours li, .parcours p
+    {
+        font-size: 18px;
+    }
+    .languages li, .frameworks li
+    {
+        width: 58px;
+        height: 58px;
+        margin: 1%;
+    }
+    .competences img
+    {
+        width: 100%;
+        height: auto;
+    }
+    /* PROJETS */
+    .carousel-caption h5
+    {
+        font-size: 25px;
+    }
+    .carousel-caption p
+    {
+        font-size: 15px;
+    }
+    .visit-button
+    {
+        width: 40%; 
+    }
+    .visit-button a
+    {
+        font-size: 25px;
+    }
 }

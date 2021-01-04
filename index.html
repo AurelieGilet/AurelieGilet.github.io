@@ -51,9 +51,11 @@
             <!-- ********************* A PROPOS ********************* -->
                 <div id="apropos" class="page container-fluid">
                     <div class="page container">
-                        <article class="article_apropos row flex-md-column justify-content-center align-items-center ">
-                            <img class="col-md-4" src="img/photo_portfolio.jpg" alt="Photo d'Aurélie Gilet">
-                            <div class="texte col-md-8">
+                        <article class="article_apropos d-flex justify-content-center align-items-center ">
+                            <div class="photo">
+                                <img src="img/photo_portfolio.jpg" alt="Photo d'Aurélie Gilet">
+                            </div>    
+                            <div class="texte">
                                 <h2> A Propos </h2>
                                 <p> J'ai commencé à travailler très jeune, avant même d’avoir pu passer mon bac. Mon parcours professionnel a été jusqu'ici très atypique, passant d’un métier à l’autre sans pouvoir en trouver un qui me passionne réellement. </p>
                                 <p>Et puis en 2018, à l’âge de 33 ans, j’ai été diagnostiquée avec un <a href="https://auticonsult.fr/autisme/"> Trouble du Spectre Autistique </a> (ou syndrome d’Asperger). Cette révélation a répondu aux questions que je me suis posées toute ma vie sur ma différence. Cela m’a permis de mieux comprendre mes difficultés, mes besoins, et surtout mes capacités. </p>
@@ -67,31 +69,31 @@
             <!-- *********************** PARCOURS *********************** -->
                 <div id="parcours" class="page container-fluid">
                     <div class="page container">
-                        <div class="parcours f-flex flex-column justify-content-end">
+                        <div class="parcours f-flex flex-column justify-content-around">
                             <div class="parcours_top row justify-content-between align-items-center">
-                                <section class="formation col-md-5 d-flex flex-column ">
+                                <section class="formation col-md-5 d-flex flex-column justify-content-around ">
                                     <h2>Formation</h2>
                                     <ul class="etudes"> 
-                                        <li> <h3>2020 - 2021</h3> <p> Formation développeur web et web mobile chez <a href="https://www.wf3.fr/formation/formation-developpeur-web-et-web-mobile/"> WebForce3 </a>. </p></li>
+                                        <li> <h3>2020 - 2021</h3> <p> Formation développeur web et web mobile chez <a href="https://www.wf3.fr/formation/formation-developpeur-web-et-web-mobile/"> WebForce3</a>. </p></li>
                                         <li> <h3>2019 - 2020</h3> <p> DAEU B à <a href="https://www.uvsq.fr/daeu-b-diplome-dacces-aux-etudes-universitaires-option-sciences"> l'Université des Sciences de Versailles</a>. <br/> Obtenu avec mention Très Bien, major de promotion.</p></li>
                                     </ul> 
                                 </section> 
-                                <section class="competences col-md-6 d-flex flex-column justify-content-between">
+                                <section class="competences col-md-6 d-flex flex-column justify-content-around">
                                     <h2>Compétences</h2>  
                                     <article class="languages">
                                         <h3>Langages Web et CMS</h3>
-                                        <ul class="d-flex">
-                                            <li class="infobulle" aria-label="HTML5"><img src="img/html_icon.png" alt="icone du langage HTML5" width="256" height="256" ></li>
+                                        <ul class="d-flex flex-wrap justify-content-around">
+                                            <li class="infobulle" aria-label="HTML5"><img src="img/html_icon.png" alt="icone du langage HTML5" width="256" height="256"></li>
                                             <li class="infobulle" aria-label="CSS3"><img src="img/css_icon.png" alt="icone du langage CSS3" width="256" height="256"></li>
                                             <li class="infobulle" aria-label="JavaScript"><img src="img/js_icon.png" alt="icone du langage JavaScript" width="256" height="256"></li>   
-                                            <li class="infobulle" aria-label="PHP"><img src="img/php_icon.png" alt="icone du langage PHP" width="256" height="256"><li>                                   
+                                            <li class="infobulle" aria-label="PHP"><img src="img/php_icon.png" alt="icone du langage PHP" width="256" height="256"></li>
                                             <li class="infobulle" aria-label="SQL"><img src="img/sql_icon.png" alt="icon du langage MySQL" width="256" height="256"></li>
                                             <li class="infobulle" aria-label="WordPress"><img src="img/wordpress_icon.png" alt="icone du CMS Wordpress" width="256" height="256"></li>
                                         </ul> 
                                     </article>                                     
                                     <article class="frameworks">
                                         <h3>Frameworks et Librairies</h3>
-                                        <ul class="d-flex ">
+                                        <ul class="d-flex flex-wrap justify-content-between ">
                                             <li class="infobulle" aria-label="Bootstrap"><img src="img/bootstrap_icon.png" alt="icone du framework Bootstrap" width="256" height="256"></li>
                                             <li class="infobulle" aria-label="JQuery"><img src="img/jquery_icon.png" alt="icone de la librairy JQuery" width="256" height="256"></li>
                                             <li class="infobulle" aria-label="Angular"><img src="img/angular_icon.png" alt="icone du framework Angular" width="256" height="256"></li>
@@ -101,8 +103,8 @@
                                     </article>                                      
                                 </section>
                             </div>
-                            <div class="parcours_bottom row align-items-center">
-                                <div class="experience col-md-12">
+                            <div class="parcours_bottom row">
+                                <div class="experience col-md-12 d-flex justify-content-center align-items-center">
                                     <p>Vous pouvez également consulter mon <span><a href="http://www.linkedin.com/in/aurelie-gilet">LinkedIn</a></span> ou télécharger mon <span><a href="docs/cv_aurelie-gilet.pdf" download > C.V. </a></span></p>
                                 </div>
                             </div>
@@ -162,7 +164,7 @@
                 <div id="contact" class="page container-fluid">
                     <div class="page container d-flex justify-content-around align-items-center">
                         <article class="article_contact row justify-content-center align-itemms-center">
-                            <div class="info col-md-5 d-flex flex-column justify-content-around align-items-center">  
+                            <div class="info col-lg-5 col-md-7 col-sm-9 col-9 d-flex flex-column justify-content-around align-items-center">  
                                 <div class="email d-flex justify-content-center align-items-around">
                                     <a class="d-flex flex-column justify-content-between align-items-center" href="mailto:aur.gilet@gmail.com"><img src="img/mail.png" alt="icone email représentant une enveloppe dans un cercle" width="240" height="240"> <h3>aur.gilet@gmail.com</h3> </a>                                  
                                 </div>                          
