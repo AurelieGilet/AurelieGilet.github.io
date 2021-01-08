@@ -17,8 +17,8 @@ calculer.addEventListener("click", function() {
     }
     else // calcul
     {
-        firstNumber = parseInt(firstNumber);
-        secondNumber = parseInt(secondNumber);
+        firstNumber = parseFloat(firstNumber);
+        secondNumber = parseFloat(secondNumber);
     
         var resultat = ' ';
         switch(operator)
