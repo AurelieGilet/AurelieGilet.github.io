@@ -136,7 +136,11 @@ time, mark, audio, video
     }
 }
 /************************************************************/
-
+html
+{
+    width: auto !important;
+    height: auto !important;
+}
 body
 {
     background-color: rgb(218, 213, 213);
@@ -190,6 +194,7 @@ li
     border-radius: 5px;
     background-image: linear-gradient(to right bottom, #cbcbcb, #bbbbbb, #acacac, #9d9d9d, #8e8e8e);
     padding: 10px;
+    margin-bottom: 5px;
     text-align: center;
 }
 a
@@ -400,6 +405,7 @@ label
     nav
     {
         height: 20vh;
+        min-height: 140px;
     }
     ul
     {

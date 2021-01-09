@@ -42,15 +42,20 @@
             </header>
 <!-- ********************************** MAIN ******************************************* -->
             <main class="container-fluid">
-                <div id="accueil" class="page row justify-content-center align-items-center">
-                    <div class="col-md-12 titre_accueil"> 
-                        <h1 class="gradient_text stretched">Aurélie Gilet</h1> 
-                        <h2 class="gradient_text stretched">Développeuse Web junior</h2> 
+            <!-- ********************* ACCUEIL ********************* -->
+                <div id="accueil" class="page container-fluid">
+                    <div class="accueil_container page container d-flex flex-column justify-content-center align-items-center">
+                        <div class="titre_principal row justify-content-center align-items-center">
+                            <section class="titre_accueil col-md-12 d-flex flex-column justify-content-center align-items-center "> 
+                                <div class="titre1 d-flex justify-content-center align-items-center"><h1 class="gradient_text stretched">Aurélie Gilet</h1></div> 
+                                <div class="titre2 d-flex justify-content-center align-items-center"><h2 class="gradient_text stretched">Développeuse Web junior</h2></div> 
+                            </section>
+                        </div>
                     </div>
                 </div>
             <!-- ********************* A PROPOS ********************* -->
                 <div id="apropos" class="page container-fluid">
-                    <div class="page container">
+                    <div class="page container d-flex flex-column justify-content-center align-items-center">
                         <article class="article_apropos d-flex justify-content-center align-items-center ">
                             <div class="photo">
                                 <img src="img/photo_portfolio.jpg" alt="Photo d'Aurélie Gilet">
@@ -68,17 +73,18 @@
                 </div >
             <!-- *********************** PARCOURS *********************** -->
                 <div id="parcours" class="page container-fluid">
-                    <div class="page container">
-                        <div class="parcours f-flex flex-column justify-content-around">
+                    <div class="page container d-flex flex-column justify-content-center align-items-center">
+                        <div class="parcours f-flex flex-column justify-content-center align-items-center">
                             <div class="parcours_top row justify-content-between align-items-center">
-                                <section class="formation col-md-5 d-flex flex-column justify-content-around ">
+                                <section class="formation col-md-5 d-flex flex-column">
                                     <h2>Formation</h2>
                                     <ul class="etudes"> 
                                         <li> <h3>2020 - 2021</h3> <p> Formation développeur web et web mobile chez <a href="https://www.wf3.fr/formation/formation-developpeur-web-et-web-mobile/"> WebForce3</a>. </p></li>
                                         <li> <h3>2019 - 2020</h3> <p> DAEU B à <a href="https://www.uvsq.fr/daeu-b-diplome-dacces-aux-etudes-universitaires-option-sciences"> l'Université des Sciences de Versailles</a>. <br/> Obtenu avec mention Très Bien, major de promotion.</p></li>
+                                        <li> <h3>2003 - 2004</h3> <p> Terminale Economique et Social.</p></li>
                                     </ul> 
                                 </section> 
-                                <section class="competences col-md-6 d-flex flex-column justify-content-around">
+                                <section class="competences col-md-6 d-flex flex-column">
                                     <h2>Compétences</h2>  
                                     <article class="languages">
                                         <h3>Langages Web et CMS</h3>
@@ -112,8 +118,8 @@
                     </div>
                 </div>
             <!-- ********************* PROJET ************************** -->
-                <div id="projets" class=" page container-fluid">
-                    <div class="page container d-flex justify-content-center align-items-center">
+                <div id="projets" class=" page container-fluid d-flex align-items-center justify-content-center">
+                    <div class="projets_container page container d-flex justify-content-center align-items-center">
                         <div id="carousel" class="carousel slide carousel-fade " data-ride="carousel">
                             <!-- Slides -->
                             <div class="carousel-inner">
@@ -171,16 +177,16 @@
                 </div>
             <!-- **************************** CONTACT ********************* -->
                 <div id="contact" class="page container-fluid">
-                    <div class="page container d-flex justify-content-around align-items-center">
+                    <div class="contact_container page container d-flex justify-content-around align-items-center">
                         <article class="article_contact row justify-content-center align-itemms-center">
                             <div class="info col-lg-5 col-md-7 col-sm-9 col-9 d-flex flex-column justify-content-around align-items-center">  
-                                <div class="email d-flex justify-content-center align-items-around">
+                                <div class="email d-flex justify-content-center align-items-center">
                                     <a class="d-flex flex-column justify-content-between align-items-center" href="mailto:aur.gilet@gmail.com"><img src="img/mail.png" alt="icone email représentant une enveloppe dans un cercle" width="240" height="240"> <h3>aur.gilet@gmail.com</h3> </a>                                  
                                 </div>                          
-                                <div class="linkedin d-flex justify-content-center align-items-around">
+                                <div class="linkedin d-flex justify-content-center align-items-center">
                                     <a class="d-flex flex-column justify-content-between align-items-center" href="http://www.linkedin.com/in/aurelie-gilet"> <img src="img/linkedin.png" alt="icone linkedin représentant les lettres In dans un cercle" width="240" height="240"> <h3>LinkedIn</h3> </a>                                    
                                 </div>
-                                <div class="github d-flex justify-content-center align-items-around">
+                                <div class="github d-flex justify-content-center align-items-center">
                                     <a class="d-flex flex-column justify-content-between align-items-center" href="https://github.com/AurelieGilet"><img src="img/github.png" alt="icone GitHub représentant un chat dans un cercle" width="240" height="240"> <h3>GitHub</h3> </a>                                  
                                 </div>
                             </div>
