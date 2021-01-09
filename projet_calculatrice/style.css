@@ -136,11 +136,7 @@ time, mark, audio, video
     }
 }
 /************************************************************/
-html
-{
-    width: auto !important;
-    height: auto !important;
-}
+
 body
 {
     background-color: rgb(218, 213, 213);
@@ -152,6 +148,8 @@ body
     min-width: 500px;
     height: 100vh;
     min-height: 800px;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 .corps
 {
@@ -208,13 +206,22 @@ a:hover
     color: white;
 }
 /* Formulaire */
+main
+{
+    padding: 0 !important;
+}
 #form-box
 {
-    width: 100%;   
+    width: 100%;
+    min-width: 355px;
+    min-height: 481px; 
+    margin: 0;  
 }
 .formulaire
 {
     min-height: 50vh;
+    min-width: 353px;
+    min-height: 460px;
     border: 5px outset #575555;
     border-radius: 10px;
     box-shadow: 4px 4px 4px #7d7b80;
@@ -371,10 +378,6 @@ label
         font-size: 16px;
         padding: 5px;
     }
-    #form-box
-    {
-        min-width: 355px;
-    }
     .send_button
     {
         height: 50px;
@@ -420,9 +423,9 @@ label
         font-size: 15px;
         padding: 5px;
     }
-    #formulaire
+    .formulaire
     {   
-        min-width: 355px;
+        min-width: 353px;
         min-height: 460px;
     }
     .send_button
@@ -440,5 +443,44 @@ label
     .infobulle
     {
         font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 500px)
+{
+        .container-fluid
+    {
+        min-width: 100%;
+        min-height: 800px;
+    }
+    .corps
+    {
+        min-width: 90%;
+        height: 90%;
+        min-height: 790px;
+    }
+    #form-box
+    {
+        min-width: 100%;
+        min-height: 481px; 
+    }
+    .formulaire
+    {   
+        min-width: 100%;
+        min-height: 460px;
+    }
+    .send_button
+    {
+        height: 50px;
+        width: 50%;
+        font-size: 4vw; 
+        padding: 1%;
+    }
+    .reset_button
+    {
+        height: 40px;
+        width: 40%;
+        font-size: 3vw; 
+        padding: 1%;
     }
 }
