@@ -163,6 +163,7 @@ main
 .titre_principal, .titre_accueil
 {
     height: 100%;
+    width: 100%;
 }
 .titre1, .titre2
 {
