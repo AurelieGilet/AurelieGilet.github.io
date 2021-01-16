@@ -1,0 +1,262 @@
+/*************************** RESET CSS ***********************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, 
+ del, dfn, em, img, ins, kbd, q, s, samp, 
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/*********************************************************************/
+/* Pulse effect */
+.bouton:hover
+{    
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes pulse 
+{
+    0% 
+    {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    50% 
+    {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% 
+    {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+@keyframes pulse 
+{
+    0% 
+    {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+    50% 
+    {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+    100% 
+    {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+/*************************************************************/
+body 
+{ 
+    background-color: rgb(218, 213, 213); 
+    font-family: 'Potta One', cursive;
+    background-image: linear-gradient(to top, #15606b, #005770, #004d75, #004177, #003373, #0d2a6c, #162265, #1d185d, #191656, #16144f, #121148, #0f0f41);
+}
+.corps
+{
+    width: 100%;
+    min-width: 1400px;
+    height: 100vh;
+    min-height: 900px;
+}
+.conteneur 
+{ 
+    width: 1000px;
+    margin: 0 auto;
+}
+header
+{
+    min-width: 1000px;
+    height: 150px;
+    padding: 20px;
+    z-index: 10;
+}
+h1
+{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+}
+.gradient_text
+{
+    background-color: #008bbf;
+    background-image: linear-gradient(to bottom, #463181, #2f4a96, #0761a4, #0076ad, #0189b2, #008ab9, #008bbf, #008cc6, #0078d1, #0062d7, #0046d5, #1717c8);
+    background-size: 100%;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    background-clip: text;
+}
+h3
+{
+    text-align: center;
+    font-size: 20px;
+    color: #008bbf;
+    z-index: 10;
+}
+h4
+{
+    text-align: center;
+    font-size: 16px;
+    color: #008cc6;
+    z-index: 10;
+}
+
+
+/* IMAGE VIEWER */
+.top_photo 
+{ 
+    width: 820px; 
+    height: 470px; 
+    border: 5px ridge #005770;
+    box-shadow: inset 2px 2px 2px #0b0b5f,2px 2px 2px #0b0b5f;
+    background-color: #11ffee00;
+    padding: 5px;
+    z-index: 10;
+}
+.top_photo img 
+{ 
+    width: 800px; 
+    height: 450px;  
+}
+
+/* CAROUSEL */
+#carousel
+{
+    width: 700px;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    z-index: 10;
+}
+#blocPhoto 
+{ 
+    position: relative;
+    width: 420px;
+    height: 100px;
+    padding: 5px;
+}
+#blocPhoto img 
+{ 
+    width: 120px; 
+    border: 2px ridge#005770; 
+    margin: 5px;
+}
+#slide1, #slide2, #slide3
+{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 415px;
+    height: 90px;
+    padding: 5px;
+    transition: all 1.5s ease;
+}
+.bouton
+{
+    background-color: #11ffee00;
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    border: 5px outset #005770;
+    box-shadow: inset 2px 2px 2px #0b0b5f,2px 2px 2px #0b0b5f;
+    border-radius: 50px;
+    display: inline-block;
+    z-index: 10;
+}
+.indicateurs
+{
+    width: 100%;
+    z-index: 10;
+}
+#indicateur1, #indicateur2, #indicateur3
+{
+    width: 60px;
+    height: 30px;
+    padding: 5px;
+}
+
+
+/* ANIMATIONS */
+
+/* Planets */
+.planets_container
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 0;
+}
+img
+{
+    z-index: 10;
+}
+#sun
+{
+    position: absolute;
+    top: -800px;
+    left: 40px;
+    opacity: 0;
+}
+#earth
+{
+    position: absolute;
+    top: -700px;
+    left: 1150px;
+    opacity: 0;
+}
+#moon
+{
+    position: absolute;
+    top: -600px;
+    left: 1250px;
+    opacity: 0;
+}
+#mars
+{
+    position: absolute;
+    top: -150px;
+    left: 20px;
+    opacity: 0;
+}
+#saturn
+{
+    position: absolute;
+    top: -200px;
+    left: 1050px;
+    opacity: 0;
+}
+
+/* STARS */
+
+#fixedStars, #movingStars
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
