@@ -21,8 +21,8 @@ time, mark, audio, video
     vertical-align: baseline;
 }
 /******************** FIN RESET ************************/ 
-/*************** PARTIE FLUID *************************/  
-.menu-checkbox, .menu-toggle, .responsive-aide
+/*************** STYLE DE BASE *************************/  
+.menu-checkbox, .menu-toggle, .responsive-aside
 {
     display: none;
 }
@@ -37,7 +37,8 @@ time, mark, audio, video
 header
 {
     width: 100%;
-    min-height: 20vh;
+    height: 20vh;
+    min-height: 185px;
     display: flex;
     flex-direction: column;
 }
@@ -45,7 +46,8 @@ header
 .haut
 {
     width: 100%;
-    min-height: 15vh;
+    height: 15vh;
+    min-height: 140px;
     display: flex;
     justify-content: space-between;
     
@@ -60,7 +62,8 @@ header
 .logo
 {
     min-width: 15%;
-    height: 9vh;
+    height:50%;
+    min-height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +72,8 @@ header
 .titre
 {
     min-width: 85%;
-    height: 15vh;
+    height: 100%;
+    min-height: 140px;
     display: flex;
     flex-direction: column;
 }
@@ -79,10 +83,10 @@ header
     font-size: 60px;
     font-weight: bold;
     font-style: italic;
-    height: 10vh;
+    min-height: 90px;
     text-align: left;
     vertical-align: middle;
-    line-height: 10vh;
+    line-height: 90px;
     white-space: nowrap;
 }
 
@@ -90,10 +94,10 @@ header
 {
     font-size: 18px;
     color:#F583E3;
-    height: 5vh;
+    min-height: 45px;
     text-align: left;
     vertical-align: middle;
-    line-height: 5vh;
+    line-height: 45px;
     white-space: nowrap;
 }
 
@@ -113,8 +117,8 @@ header
     color: #3FC9FA;
     text-align: center;
     vertical-align: middle;
-    line-height: 6vh;
-    height: 6vh;
+    line-height: 55px;
+    min-height: 55px;
     white-space: nowrap;
 }
 
@@ -122,6 +126,7 @@ header
 {
     position: relative;
     text-align: center;
+    min-height: 45px;
 }
 
 .numero
@@ -140,8 +145,8 @@ header
     font-size: 18px;
     text-align: center;
     vertical-align: middle;
-    line-height: 4vh;
-    height: 4vh;
+    line-height: 35px;
+    min-height: 35px;
     white-space: nowrap;
 }
 
@@ -161,12 +166,12 @@ header
 .compte
 {
     width: 100%;
-    height: 5vh;
+    min-height: 45px;
     font-size: 26px;
     color: white;
     text-align: center;
     vertical-align: middle;
-    line-height: 5vh;
+    line-height: 45px;
     border-bottom: 1px solid white;
     background-color: #3FC9FA;
     white-space: nowrap;
@@ -175,7 +180,7 @@ header
 .panier
 {
     width: 100%;
-    height: 8vh;
+    min-height: 73px;
     display: flex;
     border-top: 1px solid white;
     background-color: #3FC9FA;
@@ -185,7 +190,8 @@ header
 .panier a
 {
     width: 20%;
-    height: 8vh;
+    height: 100%;
+    min-height: 73px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -197,9 +203,10 @@ header
     color: white;
     text-align: center;
     vertical-align: middle;
-    line-height: 8vh;
+    line-height: 73px;
     width: 75%;
-    height: 8vh;
+    height: 100%;
+    min-height: 73px;
     white-space: nowrap;
 }
 
@@ -207,7 +214,8 @@ header
 nav
 {
     min-width: 100%;
-    min-height: 5vh;
+    height: 5vh;
+    min-height: 45px;
     background-color: #3FC9FA;    
 }
 nav ul
@@ -220,9 +228,10 @@ nav li
 {
     width: 25%;
     height: 5vh;
+    min-height: 45px;
     list-style: none;
     text-align: center;
-    line-height: 5vh;
+    line-height: 45px;
     vertical-align: middle;
 }
 nav li:hover
@@ -263,6 +272,7 @@ aside
 {
     width: 100%;
     height: 20vh;
+    min-height: 150px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 1%;
@@ -275,9 +285,10 @@ aside h3
     color: #3FC9FA;
     text-align: left;
     vertical-align: middle;
-    line-height: 5vh;
+    line-height: 45px;
     width: 100%;
     height: 5vh;
+    min-height: 45px;
 }
 
 aside p
@@ -290,6 +301,7 @@ aside p
 {
     width: 2px;
     height: 18vh;
+    min-height: 150px;
     background-image: url('img/fond.png');
 }
 
@@ -297,16 +309,17 @@ aside p
 .aside_gauche
 {
     width: 24%;
-    height: 20vh;
+    height: 100%;
     display: flex;
-    flex-direction: column;  
+    flex-direction: column; 
     padding-left: 1%;
 }
 
-.paiment
+.paiement
 {
     width: 100%;
     height: 10vh;
+    min-height: 95px;
     margin-bottom: 2%;
 }
 
@@ -314,16 +327,22 @@ aside p
 {
     width: 100%;
     height: 5vh;
+    min-height: 40px;
     display: flex;
     justify-content: start;
     align-items: center;
+}
+.img_cb img
+{
+    width: 100;
+    height: auto;
 }
 
                 /************ MILIEU **********/
 .aside_milieu
 {
     width: 47%;
-    height: 20vh;
+    height: 100%;
     display: flex;
     flex-direction: column;   
 }
@@ -332,7 +351,7 @@ aside p
 .aside_droite
 {
     width: 24%;
-    height: 20vh;
+    height: 100%;
     display: flex;
     flex-direction: column;   
 }
@@ -340,7 +359,7 @@ aside p
 .livraison,.retours
 {
     width: 100%;
-    min-height: 6vh;
+    min-height: 55px;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -357,9 +376,10 @@ aside p
 .livraison p,.retours p
 {
     min-width: 70%;
+    min-height: 45px;
     text-align: left;
     vertical-align: middle;
-    line-height: 6vh;
+    line-height: 45px;
     white-space: nowrap;
 }
 
@@ -368,6 +388,7 @@ aside p
 {
     width: 100%;
     height: auto;
+    min-height: 235px;
     display: flex;
     justify-content: space-around;
     
@@ -377,7 +398,8 @@ aside p
 article
 {
     width: 30%;
-    min-height: 25vh;
+    height: 100%;
+    min-height: 235px;
     border: 1px solid rgb(190, 190, 190);
     border-radius: 5px;
     box-shadow: 2px  2px 1px  rgb(190, 190, 190);
@@ -389,16 +411,17 @@ article h3
     font-weight: bold;
     text-align: center;
     vertical-align: middle;
-    line-height: 5vh;
+    line-height: 46px;
     width: 100%;
-    height: 5vh;
+    min-height: 46px;
     background-color: #D9D9D9;
 }
 
 .corps
 {
     width: 100%;
-    min-height: 20vh;
+    height: 20vh;
+    min-height: 185px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -408,6 +431,7 @@ article h3
 {
     width: 30%;
     height: 20vh;
+    min-height: 185px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -416,7 +440,8 @@ article h3
 .texte
 {
     width: 60%;
-    height: 19vh;
+    height: 100%;
+    min-height: 185px;
     display: flex;
     flex-direction: column;
 }
@@ -424,7 +449,8 @@ article h3
 article p 
 {
     width: 95%;
-    height: 15vh;
+    height: 85%;
+    min-height: 140px;
     font-size: 15px;
     text-align: justify;  
     display: flex;
@@ -435,13 +461,14 @@ article p
 article a
 {
     width: 95%;
-    height: 3vh;
+    height: 15%;
+    min-width: 30px;
     font-size: 18px;
     font-weight: bold ;
     color: #3FC9FA;
     text-align: right;
     vertical-align: middle;
-    line-height: 3vh;
+    line-height: 30px;
 }
 
 /************************** FOOTER ****************************/
@@ -449,6 +476,7 @@ footer
 {
     width: 100%;
     height: 5vh;
+    min-height: 45px;
     background-color: #3FC9FA;
 }
 
@@ -456,6 +484,7 @@ footer
 {
     width: 100%;
     height: 5vh;
+    min-height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;  
@@ -484,18 +513,20 @@ footer
     /************************ HEADER **************************/
     header
     {
-        min-height: 15vh;
+        height: 15vh;
+        min-height: 140px;
     }
             /************** HAUT ******************/
     .haut
     {
-        min-height: 10vh;    
+        height: 10vh;   
+        min-height: 95px; 
     }
                     /****** GAUCHE **********/
     .logo
     {
         min-width: 15%;
-        height: 7vh;
+        min-height: 60px;
     }
     .logo img
     {
@@ -505,26 +536,31 @@ footer
     .titre
     {
         height: 10vh;
+        min-height: 95px;
     }
     .titre h1
     {
         font-size: 50px;
-        height: 6vh;
-        line-height: 6vh;
+        line-height: 55px;
+        min-height: 55px;
     }
     .titre p
     {
         font-size: 16px;
-        height: 4vh;
-        line-height: 4vh;
+        min-height: 40px;
+        line-height: 40px;
     }
 
                     /******* MILIEU ************/
     .milieu h2
     {
         font-size: 30px;
-        height: 5vh;
-        line-height: 5vh;   
+        min-height: 40px;
+        line-height: 50px;   
+    }
+    .aide
+    {
+        min-height: 30px;
     }
     .aide img 
     {
@@ -540,24 +576,24 @@ footer
     .milieu p
     {
         font-size: 12px;
-        height: 3vh;
-        line-height: 3vh; 
+        min-height: 25px;
+        line-height: 25px; 
     }
 
                     /********** DROITE **********/
     .compte
     {
-        height: 3vh;
+        min-height: 35px;
         font-size: 20px;
-        line-height: 3vh;
+        line-height: 35px;
     }
     .panier
     {
-        height: 6vh;
+        min-height: 50px;
     }
     .panier a
     {
-        height: 5vh;
+        min-height: 50px;
     }
     .panier img
     {
@@ -567,8 +603,33 @@ footer
     .panier p
     {
         font-size: 18px;
-        height: 6vh;
-        line-height: 6vh;
+        min-height: 50px;
+        line-height: 50px;
+    }
+    /***************** ASIDE ******************/
+    aside, .aside_gauche, .aside_milieu, .aside_droite
+    {
+        min-height: 170px;
+    }
+    .separateur
+    {
+        min-height: 170px;
+    }
+  }
+                    /************ DROITE ************/
+    .livraison,.retours
+    {
+        min-height: 40px;
+    }
+    .livraison p,.retours p
+    {
+        min-height: 40px;
+        line-height: 40px;
+    }
+    .aside_droite img 
+    {
+        width: 30px;
+        height: 30px;
     }
     /********************* CONTENU *********************/
     .contenu_gauche img 
@@ -591,53 +652,57 @@ footer
     {
         font-size: 14px;
     }      
-}
+
 /*************************** <= 1200px *******************************/
 @media screen and (max-width: 1200px)
 {
     /************************ HEADER **************************/
     header
     {
-        min-height: 10vh;
+        min-height: 130px;
     }
             /************** HAUT ******************/
     .haut
     {
-        min-height: 8vh;    
+        min-height: 90px;    
     }
                     /****** GAUCHE **********/
     .logo
     {
         min-width: 15%;
-        height: 5vh;
+        min-height: 50px;
     }
     .logo img
     {
-        width: 43px;
-        height: 51px;
+        width: 42px;
+        height: 50px;
     }
     .titre
     {
-        height: 8vh;
+        min-height: 90px;
     }
     .titre h1
     {
         font-size: 40px;
-        height: 5vh;
-        line-height: 5vh;
+        min-height: 45px;
+        line-height: 45px;
     }
     .titre p
     {
         font-size: 13px;
-        height: 3vh;
-        line-height: 3vh;
+        min-height: 35px;
+        line-height: 35px;
     }
                     /******* MILIEU ************/
     .milieu h2
     {
         font-size: 25px;
-        height: 4vh;
-        line-height: 4vh;   
+        min-height: 35px;
+        line-height: 35px;   
+    }
+    .aide
+    {
+        min-height: 25px;
     }
     .aide img 
     {
@@ -653,56 +718,54 @@ footer
     .milieu p
     {
         font-size: 11px;
-        height: 2vh;
-        line-height: 2vh; 
+        min-height: 25px;
+        line-height: 25px; 
     }
                     /********** DROITE **********/
     .compte
     {
-        height: 2vh;
+        min-height: 30px;
         font-size: 18px;
-        line-height: 2vh;
+        line-height: 30px;
     }
     .panier
     {
-        height: 5vh;
+        min-height: 50px;
     }
-
     .panier a
     {
-        height: 4vh;
+        min-height: 50px;
     }
     .panier img
     {
-        width: 50px;
-        height: 40px;
+        width: 55px;
+        height: 45px;
     }
     .panier p
     {
         font-size: 15px;
-        height: 5vh;
-        line-height: 5vh;
+        min-height: 50px;
+        line-height: 50px;
     }
             /********************* NAV ********************/
     nav
     {
-        min-height: 4vh;
+        min-height: 40px;
     }
     nav a
     {
-        width: 25%;
         font-size: 15px;
     }
             /***************** ASIDE ******************/
     aside, .aside_gauche, .aside_milieu, .aside_droite
     {
-        height: 15vh;
+        min-height: 135px;
     }
     aside h3
     {
         font-size: 15px;
-        line-height: 4vh;
-        height: 4vh;
+        line-height: 35px;
+        min-height: 35px;
     }
     aside p
     {
@@ -710,30 +773,38 @@ footer
     }
     .separateur
     {
-        height: 13vh;
+        min-height: 135px;
     }
                     /********** GAUCHE **********/
-    .paiment
+    .paiement
     {
-        height: 8vh;
+        min-height: 80px;
     }
     .img_cb
     {
-        height: 4vh;
+        min-height: 30px;
     }   
     .aside_gauche img
     {
         width: 150px;
         height: 25px;
     }
+                    /********** MILIEU **********/
+    .milieu p
+    {
+        font-size: 12px;
+        min-height: 25px;
+        line-height: 25px; 
+    }
                     /************ DROITE ************/
     .livraison,.retours
     {
-        min-height: 5vh;
+        min-height: 40px;
     }
     .livraison p,.retours p
     {
-        line-height: 5vh;
+        min-height: 40px;
+        line-height: 40px;
     }
     .aside_droite img 
     {
@@ -744,37 +815,37 @@ footer
     /********************* CONTENU *********************/
     article
     {
-        min-height: 20vh;
+        min-height: 230px;
     }
     article h3
     {
         font-size: 15px;
-        line-height: 4vh;
-        height: 4vh;
+        line-height: 35px;
+        min-height: 35px;
     }
     .corps
     {
-        min-height: 16vh;
+        min-height: 180px;
     }
     .article_img
     {
-        height: 16vh;
+        height: 100%;
     }
     
     .texte
     {
-        height: 15vh;
+        min-height: 100%;
     }
     article p 
     {
-        height: 12vh;
+        min-height: 140px;
         font-size: 12px;
     }
     article a
     {
-        height: 2vh;
+        min-height: 20px;
         font-size: 15px;
-        line-height: 2vh;
+        line-height: 20px;
     }
     .contenu_gauche img 
     {
@@ -816,19 +887,21 @@ footer
     {
         display: none;
     }
+    /************************ HEADER **************************/
     .droite p
     {
         display: none;
     }
     .compte
     {
-        height: 2vh;
+        min-height: 30px;
         font-size: 18px;
-        line-height: 2vh;
+        line-height: 30px;
     }
     .panier
     {
         justify-content: center;
+        min-height: 50px;
     }
     .panier img
     {
@@ -839,6 +912,7 @@ footer
     {
         display: none;
     }
+    /********************* CONTENU *********************/
     .contenu
     {
         flex-direction: column;
@@ -848,32 +922,33 @@ footer
     {
         width: 70%;
         margin: 2%;
+        min-height: 230px;
     }
     article h3
     {
         font-size: 19px;
-        line-height: 5vh;
-        height: 5vh;
+        line-height: 35px;
+        min-height: 35px;
     }
     .texte
     {
         width: 60%;
-        height: 19vh;
+        min-height: 185px;
     }
 
     article p 
     {
         width: 95%;
-        height: 12vh;
+        min-height: 140px;
         font-size: 15px;
     }
 
     article a
     {
         width: 95%;
-        height: 3vh;
+        min-height: 25px;
         font-size: 18px;
-        line-height: 3vh;
+        line-height: 25px;
     }
     .contenu_gauche img 
     {
@@ -890,29 +965,123 @@ footer
         width: 90px;
         height: auto;
     }
-    .responsive-aide
+    /************************* ASIDE RESPONSIVE ******************/
+    .responsive-aside
     {
         display: contents;
+        display : flex;
+        flex-direction : column;
+        justify-content : space-around;
+        align-items: center;
+        margin: 0 auto;
         width: 70%;
-        align-self: center;
+    }
+    .responsive-aside h2, .responsive-aside h3
+    {
+        color: #3FC9FA;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 35px;
+        min-height: 35px;
+    }
+    .responsive-aside p
+    {
+        font-size: 12px;
+        width: 30%;
+    }
+    .responsive-aide
+    {
+        width: 100%;
         height: 5vh;
+        min-height: 50px;
+        align-self: center;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
     }
     .responsive-aide h2
     {
-        color: #3FC9FA;
+        width: 30%;
+        min-width: 120px;
     }
+    .responsive-aide p
+    {
+        font-size: 12px;
+        width: 100%;
+        text-align: center;
+    }
+    .aide
+    {
+        width: 30%;
+        min-width: 155px;
+    }
+    .responsive-paiement
+    {
+        width: 100%;
+        height: 5vh;
+        min-height: 50px;
+        align-self: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .responsive-paiement img
+    {
+        width: 150px;
+        height: 25px;
+    }
+    .responsive-paiement h3
+    { 
+        width: 30%;
+        min-width: 150px;
+    }
+    .responsive-services
+    {
+        width: 100%;
+        height: 5vh;
+        min-height: 50px;
+        align-self: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .responsive-services h3
+    {
+        width: 20%;
+        min-width: 70px;
+    }
+    .livraison, .retours
+    {
+        width: 35%;
+        min-width: 150px;
+        min-height: 35px;
+    }
+    .responsive-services img 
+    {
+        width: 30px;
+        height: 30px;
+    }
+    /************************* FOOTER ******************/
     .mentions
     {
         flex-wrap: wrap;
     }
 }
-
 /********************************* <= 576px ********************************/
 @media screen and (max-width: 576px)
 {
+    header
+    {
+        height: auto;
+    }
+    .haut
+    {
+        height: auto;
+    }
+    nav
+    {
+        height: auto;
+    }
     .container
     {
         width: 100%;
@@ -922,6 +1091,7 @@ footer
         display: none;
     }
         /********** Menu Burger ***********/
+    
     .menu-checkbox, .menu-toggle
     {
         display: contents;
@@ -941,86 +1111,7 @@ footer
         padding: 1%;
     }
         /********** Fin Menu Burger *********/
-    .droite p
-    {
-        display: none;
-    }
-    .compte
-    {
-        height: 2vh;
-        font-size: 18px;
-        line-height: 2vh;
-    }
-    .panier
-    {
-        justify-content: center;
-    }
-    .panier img
-    {
-        width: 50px;
-        height: 40px;
-    }
-    .panier p
-    {
-        display: none;
-    }
-    .contenu
-    {
-        flex-direction: column;
-        align-items: center;
-    }
-    article
-    {
-        width: 70%;
-        margin: 2%;
-    }
-    article h3
-    {
-        font-size: 19px;
-        line-height: 5vh;
-        height: 5vh;
-    }
-    .texte
-    {
-        width: 60%;
-        height: 19vh;
-    }
 
-    article p 
-    {
-        width: 95%;
-        height: 15vh;
-        font-size: 15px;
-    }
 
-    article a
-    {
-        width: 95%;
-        height: 3vh;
-        font-size: 18px;
-        line-height: 3vh;
-    }
-    .responsive-aide
-    {
-        display: contents;
-        width: 70%;
-        align-self: center;
-        height: 5vh;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
- 
-    }
-    .responsive-aide h2
-    {
-        color: #3FC9FA;
-    }
-    .mentions
-    {
-        flex-wrap: wrap;
-    }
-    .mentions
-    {
-        flex-wrap: wrap;
-    }
+
 }
