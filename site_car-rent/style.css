@@ -1,0 +1,443 @@
+/*************************** RESET CSS ***********************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, 
+ del, dfn, em, img, ins, kbd, q, s, samp, 
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/*********************************************************************/
+.container-fluid, .row
+{
+    padding: 0 !important;
+    margin: 0 ! important;
+}
+body
+{
+    font-family: 'Open Sans', sans-serif;
+}
+
+/****************************** HEADER *********************************/
+
+header
+{
+    width: 100%;
+    height: 600px;
+    
+}
+.banniere
+{
+    position: relative;
+    background-image:url('img/background.jpg') ;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: black;
+    width: 100%;
+    height: 100%;  
+    transition : all 1s ease;
+}
+
+.titre
+{
+    width: 100%;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    color: white;
+    text-align: center;
+    
+}
+.titre h1
+{
+    font-size: 60px;
+    font-weight: bold;
+}
+.titre p
+{
+    font-size: 20px;
+}
+
+        /************** NAV *****************/
+
+nav
+{
+    background-color: transparent;
+    color: black;
+    font-size: 15px;
+}
+nav ul
+{
+    background-color: rgb(231, 231, 231);
+    border-radius: 5px;
+}
+nav a
+{
+    color: black;
+    padding-left: 20px;
+
+}
+nav a:hover
+{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+        /************* FORM ***********/
+
+.recherche
+{
+    width: 100%;
+    position: absolute;
+    top: 500px;
+    left: 0;
+}
+.wrapper
+{
+    width: 70%;
+    min-width: 900px;
+    padding-left: 10px;
+    height: 55px;
+    border: 1px solid transparent;
+    background-color: rgb(238, 232, 232, 0.6);  
+}
+.champs
+{
+    width: 80%;
+    min-width: 710px;
+    height: 100%;
+}
+.ligne
+{
+    width: 30%;
+    min-width: 200px;
+    height: 100%;
+}
+.date, .wrapper select
+{
+    height: 35px;
+    min-width: 200px;
+    padding: 5px;
+    color: black;
+    background-color: rgb(231, 231, 231);
+    border: 1px outset rgb(231, 231, 231);
+    border-radius: 5px;
+    white-space: nowrap;
+}
+.bouton
+{
+    background-color: rgb(107, 202, 107, 0.6);
+    width: 20%;
+    min-width: 180px;
+    height: 100%;
+}
+#bouton
+{
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    border: none;   
+}
+
+        /***** FORM DATE PLACEHOLDER (doesn't work on firefox) *****/
+input[type="date"]:after {
+    color: transparent;
+    background: rgb(238, 232, 232, 0.6);
+    display: block;
+    content: url(img/calendar2.png);
+    position: absolute;
+    right: 0px;
+    color: black;
+    width: 28px;
+    height: 28px; 
+}
+.date.placeholder::before {
+    width: 100%;
+    content: attr(placeholder);
+    color: black;
+    
+}
+.date.placeholder:hover::before {
+    width: 0%;
+    content: "";
+}
+.style::-webkit-inner-spin-button{
+
+    display: none;
+    -webkit-appearance: none;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: transparent;
+    background: none;
+    z-index: 1;
+}
+
+
+/***************************** MAIN ****************************/
+main
+{
+    background-color: white;
+}
+.produits
+{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.resultat
+{
+    margin: 20px;
+}
+.resultat p
+{
+    width: 50%;
+    padding: 5px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+.resultat form
+{
+    width: 50%;
+    padding: 5px;
+    text-align: right;
+}
+.resultat select
+{
+    background-color: rgb(238, 232, 232, 0.6);
+    border-radius: 6px;
+    border: 1px outset  rgba(253, 253, 253, 0.6);
+    padding: 5px;
+}
+
+        /**************** VEHICULES *******************/
+
+.vehicules, .vehicules ul
+{
+    width: 100%;
+}
+.vehicules li
+{
+    width: 100%;
+    min-width: 910px;
+    height: 300px;
+    padding: 10px;
+    border-bottom: 1px solid rgb(238, 232, 232, 0.6);
+}
+.photos
+{
+    padding: 10px;
+}
+.prev, .next
+{
+    padding: 10px;
+    width:50px;
+    height: 50px;
+}
+.carousel
+{
+    position: relative;
+    width: 350px;
+    height: 200px;
+}
+.carousel img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 2s ease;
+}
+article
+{
+    height: 100%;
+    margin-left: 50px;
+}
+
+.nom
+{
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px;
+}
+.options
+{
+    font-size: 20px;
+    margin: 10px;
+}
+.location
+{
+    margin: 10px;
+}
+
+#reserver
+{
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    margin: 10px;
+    background-color: rgb(107, 202, 107);
+    border: 1px outset rgb(107, 202, 107);
+    border-radius: 6px;
+    color: white;
+}
+
+/***************************** FOOTER **********************************/
+
+footer div
+{
+    width: 100%;
+    height: 200px;
+}
+
+footer img, footer p
+{
+    margin: 20px;
+}
+footer span
+{
+    font-weight: bold;
+}
+
+
+/***************************** RESPONSIVE ******************************/
+/************************* width <= 992 px *****************************/
+
+@media screen and (max-width : 992px)
+{
+    /*********** FORMULAIRE ************/
+    .recherche
+    {
+        top: 450px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .wrapper
+    {
+        flex-direction: column;
+        min-width: 100%;
+        height: 110px;
+        padding-left: 0;
+    }
+    .champs
+    {
+        width: 100%;
+        min-width: 710px;
+        height: 100%;
+    }
+    .ligne
+    {
+        width: 30%;
+        min-width: 200px;
+        height: 100%;
+    }
+    .bouton
+    {
+        width: 100%;
+        min-width: 180px;
+    }
+    /***************** MAIN ***************/
+    .produits
+    {
+        max-width: 100%;
+        padding: 0;
+    }
+    /***************** VOITURES ***************/
+    .vehicules li
+    {
+        width: 100%;
+        min-width: 750px;
+    }
+    article
+    {
+        margin-left: 20px;
+    }
+}
+/************************* width <= 768 px *****************************/
+
+@media screen and (max-width : 768px)
+{
+    /*********** FORMULAIRE ************/
+    .recherche
+    {
+        top: 400px;
+    }
+    .wrapper
+    {
+        height: 180px;
+    }
+    .champs
+    {
+        flex-direction: column;
+        min-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .ligne, .date, .wrapper select
+    {
+        width: 100%;
+        min-width: 100px;
+        height: 35px;   
+    }
+    .bouton
+    {
+        height: 50px;
+    }
+    /***************** VOITURES ***************/
+    .vehicules li
+    {
+        flex-direction: column;
+        width: 100%;
+        min-width: 100%;
+        height: 500px;
+    }
+    article
+    {
+        text-align: center;
+        align-items: center;
+        margin-left: 0;
+    }
+}
+/************************* width <= 500 px *****************************/
+
+@media screen and (max-width : 500px)
+{
+    /***************** VOITURES ***************/
+    .vehicules li
+    {
+        flex-direction: column;
+        width: 100%;
+        min-width: 100%;
+        height: 500px;
+    }
+    .carousel
+    {
+        width: 250px;
+        height: 145px;
+    }
+    .carousel img
+    {
+        width: 250px;
+        height: auto;
+    }
+}
+
+
+
+
+
+
