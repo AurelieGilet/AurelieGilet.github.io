@@ -58,15 +58,18 @@ header
 {
     background-color: #E8E8E8;
     height: 16vh;
+    min-height: 145px;
 }
 .header
 {
-    height: 16vh;
+    height: 100%;
 }
         /***************** LOGO ***************/
 .logo
 {
     border-left: 2px solid #EA9F05;
+    height: 116px;
+
 }
 .jaune
 {
@@ -80,10 +83,14 @@ header
     width: 100%;
 }
         /************** EN-TETE *************/
+.en-tete
+{
+    height: 90%;
+}
 .haut
 {
     border: 1px solid;
-    height: 7vh;
+    height: 65px;
 }
 .haut img
 {
@@ -92,14 +99,14 @@ header
 }
 .milieu
 {
-    height: 4vh;
+    height: 30px;
     font-size: 20px;
     text-align: right;
     padding-right: 1%;
 }
 .bas, nav
 {
-    height: 4vh;
+    height: 30px;
     padding: 0 !important;
 }
 
@@ -134,15 +141,20 @@ main
 }
 .contenu
 {
-    padding-top: 4vh;
-    padding-bottom: 5vh;
+    padding-top: 35px;
+    padding-bottom: 40px;
     height: auto;
+    min-height: 915px;
 }
 .top, .bottom
 {
-    margin-bottom: 5vh;
+    margin-bottom: 50px;
 }
             /*********** ARTICLES *****************/
+article
+{
+    min-height: 411px;
+}
 article, article div
 {
     width: 100%;
@@ -186,7 +198,7 @@ article img
 }
 .vente
 {
-    height: 90%;
+    height: 45px;
     background-color: #414040;
     color: white;
     font-size: 20px;
@@ -204,10 +216,10 @@ article img
     font-size: 20px;
     font-weight: bold;
     text-decoration: line-through;
-    text-decoration-thickness: 0.4vh;
+    text-decoration-thickness: 2px;
     text-align: center;
     vertical-align: middle;
-    line-height: 5vh;
+    line-height: 46px;
 }
 .nouveau_prix
 {
@@ -217,22 +229,22 @@ article img
     color: #EA9F05;
     text-align: center;
     vertical-align: middle;
-    line-height: 5vh;
+    line-height: 46px;
 }
 /***************************** FOOTER ************************/
 .barre
 {
     width: 100%;
-    height: 3vh;
+    height: 28px;
     background-color: #383737;
     position: absolute;
-    top: -9%;
+    top: -50px;
     z-index: 2;
 }
 footer
 {
     background-color: #383737;
-    height: 60vh;
+    min-height: 555px;
     position: relative;
 }
 .footer
@@ -242,16 +254,16 @@ footer
 .mentions
 {
     width: 100%;
-    height: 8vh;
+    height: 74px;
     position: relative;
-    top: -6%;
+    top: -35px;
     z-index: 3;    
 }
 .mentions_contenu
 {
     width: 100%;
     background-color: #E8E8E8;
-    height: 8vh;
+    height: 100%;
     border-radius: 4px;
     font-size: 18px;
 }
@@ -283,7 +295,7 @@ footer
     color: white;
     text-align: center;
     font-size: 18px;
-    margin-bottom: 5%;
+    margin-bottom: 55px;
 }
 .services_contenu li
 {
@@ -297,7 +309,7 @@ footer
 .media
 {
     width: 40%;
-    height: 10vh;
+    height: 90px;
     border-top: 3px solid black;
     box-shadow: 0px -1px 0px rgb(167, 164, 164); 
 }
@@ -337,20 +349,6 @@ footer
     .banniere, .compte p, .panier p, .menu
     {
         display: none;
-    }
-    .logo img
-    {
-        width: 100%;
-        height: auto;
-    }
-    .haut, .milieu, .bas
-    {
-        height: 5vh;
-    }
-    .haut img
-    {
-        height: 4vh;
-        width: auto;
     }
     #navbarSupportedContent
     {
@@ -408,10 +406,60 @@ footer
 {
     article
     {
-        margin: 0 !important;
+        margin-top:20px;
+        margin-bottom:20px;
     }
     .services_contenu
     {
        width: 90%;
+    }
+}
+
+/******************* <=500px *********************/
+@media screen and (max-width: 500px)
+{
+    .logo img
+    {
+        width: 100%;
+        height: auto;
+    }
+    .logo p 
+    {
+        font-size: 15px;
+    }
+    .en-tete
+    {
+        height: 90%;
+        min-width: 100px;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .haut
+    {
+        width: 100px;
+        height: 55px;
+    }
+    .haut img
+    {
+        width: 35px;
+        height: auto;
+    }
+    .milieu p
+    {
+        font-size: 15px;
+    }
+    .mentions_contenu li:nth-of-type(2):before, .mentions_contenu li:nth-of-type(3):before, .mentions_contenu li:nth-of-type(4):before
+    {
+    width: 15px;
+    height: 15px;
+    left: -12%;
+    top: 2px;
+    }
+    .mentions_contenu
+    {
+        font-size: 15px;
     }
 }
