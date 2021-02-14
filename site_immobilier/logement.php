@@ -15,12 +15,12 @@ if(isset($_GET['id_logement']) && !empty($_GET['id_logement']))
     }
     else
     {
-        header('location: accueil.php');
+        header('location: index.php');
     }
 }
 else 
 {
-    header('location: accueil.php');
+    header('location: index.php');
 }
 //////////////////////////////////////////////////////////
 require_once('include/header.inc.php');
