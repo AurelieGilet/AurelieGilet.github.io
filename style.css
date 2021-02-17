@@ -768,7 +768,7 @@ footer a
     }
     .visit-button a
     {
-        font-size: 25px;
+        font-size: 18px;
     }
 }
 /*********************************** <= 423px **********************************/
@@ -814,6 +814,19 @@ footer a
         width: 48px;
         height: 48px;
         margin: 1%;
+    }
+    /* A PROPOS */
+    .carousel-caption h5
+    {
+        font-size: 18px;
+    }
+    .carousel-caption p
+    {
+        font-size: 12px;
+    }
+    .visit-button a
+    {
+        font-size: 15px;
     }
     /* CONTACT */
     .article_contact
