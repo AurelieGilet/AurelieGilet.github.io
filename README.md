@@ -4,3 +4,5 @@ It's still a work in progress, as I continue to learn new languages and techniqu
 
 I have included the projects made during the training.
 They're the witnesses of my progress.
+
+This site is visible on https://www.aurelie-gilet.com
