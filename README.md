@@ -11,5 +11,7 @@ I have included the list of the languages and framework I worked with along with
 
 They're the witnesses of my progress.
 
-This site is visible on https://www.aurelie-gilet.com
+This site is visible on https://www.aurelie-gilet.website
+
+P.S.: I intend to remake entirely my portfolio in the upcomming month. 
 
