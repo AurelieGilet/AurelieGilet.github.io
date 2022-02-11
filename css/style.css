@@ -1,0 +1,114 @@
+/***** FONTS ******/
+@font-face {
+    font-family: 'DarumaDropOne';
+    src: url('/fonts/daruma-drop-one-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Schoolbell';
+    src: url('/fonts/Schoolbell-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GloriaHallelujah';
+    src: url('/fonts/GloriaHallelujah-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: GloriaHallelujah;
+}
+
+h1, h2 {
+    font-family: DarumaDropOne;
+}
+
+li, button {
+    font-family: Schoolbell;
+    cursor: pointer;
+}
+
+/***** COLORS ******/
+:root {
+    --haiti: #201534;
+    --ebony-clay: #2B1C47;
+    --royal-fuchsia : #C22492;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+em {
+    color: var(--royal-fuchsia);
+}
+
+/***** SCROLLBAR  ******/
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--ebony-clay);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--haiti);
+}
+
+/***** UTILITIES ******/
+
+.flex-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/***** LANDING PAGE ******/
+
+#home {
+    height: 100vh;
+    background-color: var(--ebony-clay);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+#home h1 {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#home button {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 40px;
+    color: white;
+    font-size: 1.2rem;   
+}
+
+#home button:hover {
+    color: var(--royal-fuchsia);
+    border-color: var(--royal-fuchsia);
+}
+
+.fa-arrow-right {
+    margin-left: 10px;
+    transition: transform .2s ease-in-out;
+}
+
+/***** RESPONSIVE *****/
+
+@media screen and (min-width: 768px) {
+    /***** LANDING PAGE ******/
+    #home h1 {
+        font-size: 2.6rem;
+    }
+    #home button {
+        font-size: 1.5rem;
+    }
+}
