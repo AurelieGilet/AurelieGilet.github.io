@@ -7,11 +7,11 @@ homepageBtn.addEventListener("mouseenter", function () {
 });
 
 homepageBtn.addEventListener("mouseleave", function () {
-    const homepageBtnArrow = document.getElementById("homepage-btn-arrow");
-    homepageBtnArrow.style.transform = "rotate(0deg)";
-  });
+  const homepageBtnArrow = document.getElementById("homepage-btn-arrow");
+  homepageBtnArrow.style.transform = "rotate(0deg)";
+});
 
-// BURGER NAV
+// BURGER NAVBAR
 const burgerBtn = document.getElementById("burger-btn");
 const navList = document.getElementById("nav-list");
 
@@ -46,4 +46,33 @@ function menuDisplay() {
   } else {
     navList.classList.add("nav-list-show");
   }
+}
+
+// STICKY NAVBAR
+const navbar = document.getElementById("navbar");
+const navPosition = navbar.offsetTop;
+
+window.onscroll = function () {
+  getSticky();
+};
+
+function getSticky() {
+  if (window.pageYOffset > navPosition + 95) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+// SELECTED MENU COLOR
+const navListItems = navList.getElementsByTagName("li");
+
+for (let i = 0; i < navListItems.length; i++) {
+  navListItems[i].addEventListener("click", function () {
+    let selected = document.getElementsByClassName("selected");
+    if (selected.length > 0) {
+      selected[0].className = selected[0].className.replace("selected", "");
+    }
+    this.className += "selected";
+  });
 }
