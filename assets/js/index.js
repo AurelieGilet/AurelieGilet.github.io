@@ -48,22 +48,6 @@ function menuDisplay() {
   }
 }
 
-// STICKY NAVBAR
-const navbar = document.getElementById("navbar");
-const navPosition = navbar.offsetTop;
-
-window.onscroll = function () {
-  getSticky();
-};
-
-function getSticky() {
-  if (window.pageYOffset > navPosition + 95) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-
 // SELECTED MENU COLOR
 const navListItems = navList.getElementsByTagName("li");
 
@@ -76,3 +60,100 @@ for (let i = 0; i < navListItems.length; i++) {
     this.className += "selected";
   });
 }
+
+homepageBtn.addEventListener("click", function() {
+  let selected = document.getElementsByClassName("selected");
+    if (selected.length > 0) {
+      selected[0].className = selected[0].className.replace("selected", "");
+    }
+    navListItems[1].className += "selected";
+})
+
+// PROJECTS OVERLAY
+const body = document.getElementsByClassName("body");
+const overlay = document.getElementsByClassName("overlay");
+
+for (let i = 0; i < body.length; i++) {
+  body[i].addEventListener("mouseover", function() {
+    overlay[i].style.display = "flex";
+  });
+  body[i].addEventListener("mouseout", function() {
+    overlay[i].style.display = "none";
+  });
+}
+
+// PROJECTS TECHNOLOGY SORTING
+
+function getElementWidth(element) {
+  const style = window.getComputedStyle(element);
+
+  return element.offsetWidth + parseInt(style.margin);
+}
+
+function getBestFit(elements, availableSpace) {
+  let minAvailableSpace = availableSpace;
+  let bestFitIndex = -1;
+
+  elements.forEach((element, i) => {
+    if (element.used) {
+      return;
+    }
+
+    const elementAvailableSpace = availableSpace - element.width;
+
+    if (elementAvailableSpace >= 0 && elementAvailableSpace < minAvailableSpace) {
+      minAvailableSpace = elementAvailableSpace;
+      bestFitIndex = i;
+    }
+  });
+
+  return bestFitIndex;
+}
+
+function getFirstNotUsed(elements) {
+  for (let element of elements) {
+    if (!element.used) {
+      return element;
+    }
+  }
+}
+
+const technologyList = document.getElementById('technology-list');
+const totalSpace = technologyList.clientWidth;
+const items = Array.from(technologyList.children).map((element) => {
+  return {
+    element,
+    used: false,
+    width: getElementWidth(element),
+  };
+});
+const totalItems = items.length;
+const firstItem = items[0];
+const sortedElements = [firstItem.element];
+
+firstItem.used = true;
+
+let availableSpace = totalSpace - firstItem.width;
+
+for (let i = 1; i < totalItems; ++i) {
+  const bestFitIndex = getBestFit(items, availableSpace);
+  
+  let item;
+  
+  if (bestFitIndex === -1) {
+    item = getFirstNotUsed(items);
+    availableSpace = totalSpace - item.width;
+  } else {
+    item = items[bestFitIndex];
+    availableSpace -= item.width;
+  }
+  
+  sortedElements.push(item.element);  
+  item.used = true;
+}
+
+sortedElements.forEach((element) => {
+  
+  technologyList.appendChild(element);
+});
+

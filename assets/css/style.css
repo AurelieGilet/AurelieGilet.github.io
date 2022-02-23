@@ -18,13 +18,13 @@ body {
     font-family: GloriaHallelujah;
 }
 
-h1, h2 {
+h1, h2, h3 {
     font-family: DarumaDropOne;
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
 }
 
-button, #nav-list {
+button, #nav-list, #filter-list {
     font-family: Schoolbell;
     cursor: pointer;
     font-size: 1.2rem;
@@ -35,6 +35,8 @@ button, #nav-list {
     --haiti: #201534;
     --ebony-clay: #2B1C47;
     --royal-fuchsia : #C22492;
+    --platinum : #E5E4E2;
+    --gunsmoke : #898884;
 }
 
 body {
@@ -78,10 +80,36 @@ html {
 
 /***** UTILITIES ******/
 
+body {
+    min-width: 320px;
+    min-height: 100vh;
+}
+
 .flex-centered {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.button {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white; 
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+}
+
+.button:hover {
+    color: var(--royal-fuchsia);
+    border-color: var(--royal-fuchsia);
+    box-shadow: 0px 4px 4px #201534;
+    transform: translateY(-2px);
+}
+
+.button:active {
+    box-shadow: none;
+    transform: translateY(0);
 }
 
 .title {
@@ -112,27 +140,6 @@ html {
     margin-bottom: 40px;
 }
 
-#home button {
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 5px;
-    padding: 5px 10px;
-    color: white; 
-    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
-}
-
-#home button:hover {
-    color: var(--royal-fuchsia);
-    border-color: var(--royal-fuchsia);
-    box-shadow: 0px 4px 4px #201534;
-    transform: translateY(-2px);
-}
-
-#home button:active {
-    box-shadow: none;
-    transform: translateY(0);
-}
-
 .fa-arrow-right {
     margin-left: 10px;
     transition: transform .2s ease-in-out;
@@ -147,22 +154,10 @@ nav {
     width: 100%;
     height: 95px;
     display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 10;
     background-color: var(--haiti);
-    animation: slide-up .5s;
-}
-
-nav.sticky {
-    animation: slide-down .5s;
-}
-
-.sticky {
-    position: fixed;
-    top: 0; 
-}
-
-.sticky + #about {
-    padding-top: 200px;
-    transition: all .5s ease;
 }
 
 /* BURGER BUTTON */
@@ -224,13 +219,14 @@ nav.sticky {
 
 #nav-list li:hover, .selected {
     color: var(--royal-fuchsia);
+    transform: translateY(-2px);
 }
 
 /***** ABOUT *****/
 #about {
-    min-height: 80vh;
+    min-height: 100vh;
     flex-direction: column;
-    padding: 40px;
+    padding: 95px 40px 40px 40px;
 }
 
 .container {
@@ -283,16 +279,142 @@ aside svg:hover {
 aside svg:active {
     transform: translateY(0);
 }
- 
+
+/***** PORTFOLIO *****/
+#portfolio {
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 95px 40px 40px 40px;
+}
+
+#filter-list {
+    flex-wrap: wrap;
+}
+
+#filter-list li{
+    white-space: nowrap;
+    margin: 10px;
+}
+
+.content {
+    flex-direction: column;
+    width: 100%;
+    padding: 40px 0;
+}
+
+/* PROJECTS WINDOW DISPLAY */
+
+.project {
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    margin: 20px 0;
+}
+
+.header {
+    width: 100%;
+    justify-content: space-between;
+    background-color: var(--platinum);
+    color: black;
+    filter: drop-shadow(0px 2px 2px var(--gunsmoke));
+}
+
+.project-title {
+    width: 75%;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.controls {
+    width: 25%;
+}
+
+.controls svg {
+    font-size: 0.8rem;
+    margin: 5px;
+    color: var(--gunsmoke);
+}
+
+.body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--platinum);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(43, 28, 71, 0.7);
+    padding: 10px;
+}
+
+#technology-list {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#technology-list li {
+    background-color: var(--ebony-clay);
+    border-radius: 5px;
+    padding: 5px 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin: 5px;
+    font-family: Schoolbell;
+    font-size: 0.8rem;
+    user-select: none;
+}
+
+.more-btn {
+    background-color: var(--ebony-clay);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin: 5px;
+    color: white;
+    font-size: 1rem;
+}
+
+/***** FOOTER *****/
+footer {
+    background-color: var(--haiti);
+}
+
+footer p {
+    font-family: Schoolbell;
+    text-align: center;
+    padding: 10px 0;
+}
+
 
 /***** RESPONSIVE *****/
 
+@media screen and (min-width: 480px) {
+    /***** PORTFOLIO ******/
+    .project {
+        width: 400px;
+        height: 265px;
+    }
+}
+
 @media screen and (min-width: 768px) {
+    /***** UTILITIES ******/
     h2 {
         font-size: 2.2rem;
     }
     p {
         font-size: 1.3rem;
+    }
+    .button {
+        font-size: 1.5rem;
     }
     .small {
         font-size: 0.8rem;
@@ -303,9 +425,6 @@ aside svg:active {
     /***** LANDING PAGE ******/
     #home h1 {
         font-size: 2.6rem;
-    }
-    #home button {
-        font-size: 1.5rem;
     }
     /***** NAVBAR ******/
     #burger-btn {
@@ -331,5 +450,40 @@ aside svg:active {
         text-align: left;
         padding-left: 30px;
         max-width: 600px;
+    }
+    /***** PORTFOLIO ******/
+    .project {
+        width: 400px;
+        height: 265px;
+    }
+    .technology-list li {
+        font-size: 1rem;
+    }
+    .more-btn {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    /***** PORTFOLIO ******/
+    .content {
+        padding: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-gap: 40px;
+    }
+    .project {
+        margin: 0;
+        width: 400px;
+        height: 265px;
+    }
+    .project-title {
+        font-size: 1.5rem;
+    }
+    .technology-list li {
+        font-size: 1rem;
+    }
+    .more-btn {
+        font-size: 1rem;
     }
 }
