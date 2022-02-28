@@ -61,29 +61,28 @@ for (let i = 0; i < navListItems.length; i++) {
   });
 }
 
-homepageBtn.addEventListener("click", function() {
+homepageBtn.addEventListener("click", function () {
   let selected = document.getElementsByClassName("selected");
-    if (selected.length > 0) {
-      selected[0].className = selected[0].className.replace("selected", "");
-    }
-    navListItems[1].className += "selected";
-})
+  if (selected.length > 0) {
+    selected[0].className = selected[0].className.replace("selected", "");
+  }
+  navListItems[1].className += "selected";
+});
 
 // PROJECTS OVERLAY
 const body = document.getElementsByClassName("body");
 const overlay = document.getElementsByClassName("overlay");
 
 for (let i = 0; i < body.length; i++) {
-  body[i].addEventListener("mouseover", function() {
+  body[i].addEventListener("mouseover", function () {
     overlay[i].style.display = "flex";
   });
-  body[i].addEventListener("mouseout", function() {
+  body[i].addEventListener("mouseout", function () {
     overlay[i].style.display = "none";
   });
 }
 
 // PROJECTS TECHNOLOGY SORTING
-
 function getElementWidth(element) {
   const style = window.getComputedStyle(element);
 
@@ -101,7 +100,10 @@ function getBestFit(elements, availableSpace) {
 
     const elementAvailableSpace = availableSpace - element.width;
 
-    if (elementAvailableSpace >= 0 && elementAvailableSpace < minAvailableSpace) {
+    if (
+      elementAvailableSpace >= 0 &&
+      elementAvailableSpace < minAvailableSpace
+    ) {
       minAvailableSpace = elementAvailableSpace;
       bestFitIndex = i;
     }
@@ -118,7 +120,7 @@ function getFirstNotUsed(elements) {
   }
 }
 
-const technologyList = document.getElementById('technology-list');
+const technologyList = document.getElementById("technology-list");
 const totalSpace = technologyList.clientWidth;
 const items = Array.from(technologyList.children).map((element) => {
   return {
@@ -137,9 +139,9 @@ let availableSpace = totalSpace - firstItem.width;
 
 for (let i = 1; i < totalItems; ++i) {
   const bestFitIndex = getBestFit(items, availableSpace);
-  
+
   let item;
-  
+
   if (bestFitIndex === -1) {
     item = getFirstNotUsed(items);
     availableSpace = totalSpace - item.width;
@@ -147,13 +149,78 @@ for (let i = 1; i < totalItems; ++i) {
     item = items[bestFitIndex];
     availableSpace -= item.width;
   }
-  
-  sortedElements.push(item.element);  
+
+  sortedElements.push(item.element);
   item.used = true;
 }
 
 sortedElements.forEach((element) => {
-  
   technologyList.appendChild(element);
 });
 
+// PROJECT DETAILS MODAL
+const openModalBtn = document.getElementsByClassName("more-btn");
+const closeModalBtn = document.getElementById("close");
+const modal = document.getElementById("project-wrapper");
+const HTMLBody = document.getElementsByTagName("body");
+
+for (let i = 0; i < openModalBtn.length; i++) {
+  openModalBtn[i].addEventListener("click", function () {
+    modal.style.display = "flex";
+    HTMLBody[0].classList.add("hide-scroll");
+  });
+}
+
+if (closeModalBtn) {
+  body[0].classList.add("modal-open");
+
+  closeModalBtn.addEventListener("click", function () {
+    modal.style.display = "none";
+    HTMLBody[0].classList.remove("hide-scroll");
+  });
+}
+
+// PROJECT DETAILS CAROUSEL
+const leftArrow = document.getElementById("arrow-left");
+const rightArrow = document.getElementById("arrow-right");
+const dots = document.getElementsByClassName("dot");
+
+let slideIndex = 1;
+
+leftArrow.addEventListener("click", () => plusSlide(-1));
+rightArrow.addEventListener("click", () => plusSlide(+1));
+
+for (let i = 0; i < dots.length; i++) {
+  dots[i].addEventListener("click", () => currentSlide(i + 1));
+}
+
+function plusSlide(n) {
+  showSlide((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlide((slideIndex = n));
+}
+
+function showSlide(n) {
+  const slides = document.getElementsByClassName("slide");
+
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
