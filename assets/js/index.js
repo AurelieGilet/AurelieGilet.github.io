@@ -3,11 +3,13 @@ const homepageBtn = document.getElementById("homepage-btn");
 
 homepageBtn.addEventListener("mouseenter", function () {
   const homepageBtnArrow = document.getElementById("homepage-btn-arrow");
+
   homepageBtnArrow.style.transform = "rotate(90deg)";
 });
 
 homepageBtn.addEventListener("mouseleave", function () {
   const homepageBtnArrow = document.getElementById("homepage-btn-arrow");
+
   homepageBtnArrow.style.transform = "rotate(0deg)";
 });
 
@@ -48,24 +50,28 @@ function menuDisplay() {
   }
 }
 
-// SELECTED MENU COLOR
+// MENU SELECTED COLOR
 const navListItems = navList.getElementsByTagName("li");
 
 for (let i = 0; i < navListItems.length; i++) {
   navListItems[i].addEventListener("click", function () {
     let selected = document.getElementsByClassName("selected");
+
     if (selected.length > 0) {
       selected[0].className = selected[0].className.replace("selected", "");
     }
+
     this.className += "selected";
   });
 }
 
 homepageBtn.addEventListener("click", function () {
   let selected = document.getElementsByClassName("selected");
+
   if (selected.length > 0) {
     selected[0].className = selected[0].className.replace("selected", "");
   }
+
   navListItems[1].className += "selected";
 });
 
@@ -77,6 +83,7 @@ for (let i = 0; i < body.length; i++) {
   body[i].addEventListener("mouseover", function () {
     overlay[i].style.display = "flex";
   });
+
   body[i].addEventListener("mouseout", function () {
     overlay[i].style.display = "none";
   });
@@ -120,43 +127,48 @@ function getFirstNotUsed(elements) {
   }
 }
 
-const technologyList = document.getElementById("technology-list");
-const totalSpace = technologyList.clientWidth;
-const items = Array.from(technologyList.children).map((element) => {
-  return {
-    element,
-    used: false,
-    width: getElementWidth(element),
-  };
-});
-const totalItems = items.length;
-const firstItem = items[0];
-const sortedElements = [firstItem.element];
+const technologyList = document.getElementsByClassName("technology-list");
 
-firstItem.used = true;
+for (let i = 0; i < technologyList.length; i++) {
+  const totalSpace = technologyList[i].clientWidth;
 
-let availableSpace = totalSpace - firstItem.width;
+  const items = Array.from(technologyList[i].children).map((element) => {
+    return {
+      element,
+      used: false,
+      width: getElementWidth(element),
+    };
+  });
 
-for (let i = 1; i < totalItems; ++i) {
-  const bestFitIndex = getBestFit(items, availableSpace);
+  const totalItems = items.length;
+  const firstItem = items[0];
+  const sortedElements = [firstItem.element];
 
-  let item;
+  firstItem.used = true;
 
-  if (bestFitIndex === -1) {
-    item = getFirstNotUsed(items);
-    availableSpace = totalSpace - item.width;
-  } else {
-    item = items[bestFitIndex];
-    availableSpace -= item.width;
+  let availableSpace = totalSpace - firstItem.width;
+
+  for (let i = 1; i < totalItems; ++i) {
+    const bestFitIndex = getBestFit(items, availableSpace);
+
+    let item;
+
+    if (bestFitIndex === -1) {
+      item = getFirstNotUsed(items);
+      availableSpace = totalSpace - item.width;
+    } else {
+      item = items[bestFitIndex];
+      availableSpace -= item.width;
+    }
+
+    sortedElements.push(item.element);
+    item.used = true;
   }
 
-  sortedElements.push(item.element);
-  item.used = true;
+  sortedElements.forEach((element) => {
+    technologyList[i].appendChild(element);
+  });
 }
-
-sortedElements.forEach((element) => {
-  technologyList.appendChild(element);
-});
 
 // PROJECT DETAILS MODAL
 const openModalBtn = document.getElementsByClassName("more-btn");

@@ -360,12 +360,12 @@ aside svg:active {
     padding: 10px;
 }
 
-#technology-list {
+.technology-list {
     width: 100%;
     flex-wrap: wrap;
 }
 
-#technology-list li {
+.technology-list li {
     background-color: var(--ebony-clay);
     border-radius: 5px;
     padding: 5px 10px;
@@ -411,7 +411,7 @@ aside svg:active {
 /* CAROUSEL */
 .carousel-wrapper {
     width: 100%;
-    aspect-ratio: 3/2;
+    aspect-ratio: 16/9;
     flex: 0 1 auto;
     flex-direction: column;
     position: relative;
@@ -419,7 +419,7 @@ aside svg:active {
 
 #carousel-items {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 16/9;
     position: absolute;
     overflow: hidden;
     object-fit: cover;
@@ -428,10 +428,12 @@ aside svg:active {
 #carousel-items img {
     min-width: 100%;
     min-height: 100%;
-    transform: translate(-50%, -50%);
     position: absolute;
-    left: 50%;
-    top: 50%;
+    display: none;
+}
+
+#carousel-items img:first-child {
+    display: block;
 }
 
 .carousel-controls {
