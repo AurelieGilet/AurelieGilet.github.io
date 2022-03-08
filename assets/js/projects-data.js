@@ -11,7 +11,7 @@ class Project {
 }
 
 const charnetDeSante = new Project({
-  id: "charnet-de-sante",
+  id: "charnetDeSante",
   title: "Le Charnet de Santé",
   goal: "Projet personnel réalisé dans le cadre de la soutenance du titre professionnel Développeur Web et Web Mobile. Il s'agit d'un carnet de santé en ligne pour chat, gratuit et sécurisé, qui permet de consigner et centraliser toutes les informations sur la santé et l'entretien quotidien de son chat et de les partager facilement avec son vétérinaire.",
   description: [
@@ -56,7 +56,7 @@ const charnetDeSante = new Project({
 });
 
 const blogHdm = new Project({
-  id: "blog-hdm",
+  id: "blogHdm",
   title: "Blog Homme de Métier",
   goal: "Projet réalisé durant mon stage en entreprise chez HDM Network. Il s'agit d'un blog faisant partie du site \"Homme de Métier\", permettant de rédiger des articles de conseils sur les travaux réalisables chez soi.",
   description: [
@@ -96,7 +96,7 @@ const blogHdm = new Project({
 });
 
 const misterNickel = new Project({
-  id: "mister-nickel",
+  id: "misterNickel",
   title: "Mister Nickel",
   goal: "Projet réalisé durant mon stage en entreprise chez HDM Network. Je devais réaliser l'intégration d'une maquette de site pour un client de HDM.",
   description: [
@@ -151,7 +151,7 @@ const chapeau = new Project({
 });
 
 const pizzaMarco = new Project({
-  id: "pizza-marco",
+  id: "pizzaMarco",
   title: "Pizza Marco",
   goal: "Projet réalisé durant mon stage en entreprise chez HDM Network. Je devais réaliser l'intégration d'une maquette de site pour le restaurant d'un partenaire de HDM.",
   description: [
@@ -201,7 +201,7 @@ const nostimia = new Project({
 });
 
 const pippoEtFils = new Project({
-  id: "pippo-et-fils",
+  id: "pippoEtFils",
   title: "Pippo & Fils",
   goal: "Projet réalisé durant mon stage en entreprise chez HDM Network. Je devais réaliser l'intégration d'une maquette de site pour le restaurant d'un partenaire de HDM.",
   description: [
@@ -227,7 +227,7 @@ const pippoEtFils = new Project({
 });
 
 const JeuxPartage = new Project({
-  id: "jeux-partage",
+  id: "JeuxPartage",
   title: "Jeux Partage !",
   goal: "Projet de groupe réalisé pour la soutenance finale de la formation WebForce3. Il s'agit d'un site de mise en relation de personnes souhaitant partager leurs jeux de société.",
   description: [
@@ -274,7 +274,7 @@ const JeuxPartage = new Project({
 });
 
 const agenceImmobiliere = new Project({
-  id: "agence-immobiliere",
+  id: "agenceImmobiliere",
   title: "Agence Immobilière",
   goal: "Projet réalisé dans le cadre de la formation WebForce3. L'objectif était le développement front et back-end d'un site de location et de vente de biens immobiliers.",
   description: [
@@ -308,7 +308,7 @@ const agenceImmobiliere = new Project({
 });
 
 const carRent = new Project({
-  id: "car-rent",
+  id: "carRent",
   title: "Bienvenue à bord",
   goal: "Projet réalisé dans le cadre de la formation WebForce3. L'objectif était l'intégration d'une maquette pour un site de location de voiture.",
   description: [
@@ -334,7 +334,7 @@ const carRent = new Project({
 });
 
 const boutiqueSport = new Project({
-  id: "boutique-sport",
+  id: "boutiqueSport",
   title: "Sport.com",
   goal: "Projet réalisé dans le cadre de la formation WebForce3. L'objectif était l'intégration d'une maquette pour une boutique d'articles de sport en ligne.",
   description: [
@@ -377,55 +377,133 @@ function generateWindow(project) {
       '<div class="header flex-centered">' +
         '<h3 class="project-title">' +
           project.title +
-        "</h3>" +
+        '</h3>' +
         '<div class="window-controls flex-centered">' +
           '<i class="fa-solid fa-window-minimize"></i>' +
           '<i class="fa-solid fa-window-maximize"></i>' +
           '<i class="fa-solid fa-rectangle-xmark"></i>' +
-        "</div>" +
-      "</div>" +
+        '</div>' +
+      '</div>' +
       '<div class="body" style="background-image: url(' +
         project.images[0] +
       ')">' +
         '<div class="overlay">' +
           '<ul class="technology-list flex-centered">' +
             generateTechnologyList(project) +
-          "</ul>" +
+          '</ul>' +
           '<button class="button more-btn" data-project="' +
             project.id +
           '">Voir plus ...</button>' +
-        "</div>" +
-      "</div>" +
-    "</div>";
+        '</div>' +
+      '</div>' +
+    '</div>'
+  ;
 }
 
 projectsArray.forEach((project) => {
   generateWindow(project);
 });
 
-// PROJECT DETAILS DISPLAY (provisional TODO)
-const carouselItems = document.getElementById("carousel-items");
+// PROJECT DETAILS MODAL DISPLAY
+const modalOverlay = document.getElementById("project-wrapper");
 
-for (let i = 0; i < boutiqueSport.images.length; i++) {
-  carouselItems.innerHTML +=
-    '<img class="slide fade" src="' +
-    boutiqueSport.images[i] +
-    '" alt="' +
-    boutiqueSport.altAttribute[i] +
-    '">';
+function generateCarrouselImages(project) {
+  let pictures = "";
+
+  for (let i = 0; i < project.images.length; i++) {
+    pictures += 
+      '<img class="slide fade" src="' +
+        project.images[i] +
+      '" alt="' +
+        project.altAttribute[i] +
+      '">';
+  }
+
+  return pictures;
 }
 
-const projectTitle = document.getElementById("project-title");
-const projectGoal = document.getElementById("project-goal");
-const projectDescription = document.getElementById("project-description");
+function generateCarrouselDotIndicators(project) {
+  let dots = "";
 
-const title = boutiqueSport.title;
-const goal = boutiqueSport.goal;
-const description = boutiqueSport.description;
+  for (let i = 0; i < project.images.length; i++) {
+    if (i == 0) {
+      dots += '<div class="dot active"><i class="fa-solid fa-circle"></i></div>';
+    } else { 
+      dots += '<div class="dot"><i class="fa-solid fa-circle"></i></div>';
+    }
+  }
 
-projectTitle.innerHTML = title;
-projectGoal.innerHTML = goal;
-
-for (let i = 0; i < description.length; i++) {
-  projectDescription.innerHTML += "<p>" + description[i] + "</p>";
+  return dots;
 }
+
+function generateProjectDescription(project) {
+  let content = "";
+
+  for (let i = 0; i < project.description.length; i++) {
+    content += "<p>" + project.description[i] + "</p>";
+  }
+
+  return content;
+}
+
+// All projects don't necessarily have a github repository associated
+function generateGithubBtn(project) {
+  let githubBtn = "";
+
+  if (project.github != false) {
+    githubBtn = 
+      '<a href="' + project.github + '">' +
+          '<button class="button flex-centered"> Repo Github' +
+            '<i class="fa-solid fa-share-from-square"></i>' +
+          '</button>' +
+      '</a>';
+  }
+
+  return githubBtn;
+}
+
+function generateModal(project) {
+  // The project variable is passed in index.js at 180
+  // But it is a string so we need to get the corresponding object
+  project = projectsArray.find(({id}) => id === project);
+
+  modalOverlay.innerHTML =
+    '<div id="project-details">' +
+      '<div class="carousel-wrapper flex-centered">' +
+        '<div id="carousel-items">' + 
+          generateCarrouselImages(project) + 
+        '</div>' +
+        '<div class="carousel-controls flex-centered">' +
+          '<div id="arrow-left">' +
+            '<i class="fa-solid fa-angle-left"></i>' +
+          '</div>' +
+          '<div id="arrow-right">' +
+            '<i class="fa-solid fa-angle-right"></i>' +
+          '</div>' +
+        '</div>' +
+        '<div class="carousel-indicators flex-centered">' +
+          generateCarrouselDotIndicators(project) +
+        '</div>' +
+      '</div>' +
+      '<article>' +
+        '<h3 id="project-title">' + project.title + '</h3>' +
+        '<p id="project-goal">' + project.goal + '</p>' +
+        '<div id="project-description">' +
+          generateProjectDescription(project) +
+        '</div>' +
+        '<div class="access flex-centered">' +
+          '<a href="' + project.website + '"> ' +
+            '<button class="button flex-centered"> Voir le site' +
+                '<i class="fa-solid fa-share-from-square"></i>' +
+            '</button>' +
+            '</a>' +
+            generateGithubBtn(project)   +
+        '</div>' +
+        '<div id="close">' +
+            '<i class="fa-solid fa-xmark"></i>' +
+        '</div>' +
+      '</article>' +
+    '</div>'
+  ;
+}
+
