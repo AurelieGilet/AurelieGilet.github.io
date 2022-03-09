@@ -372,7 +372,7 @@ function generateTechnologyList(project) {
 }
 
 function generateWindow(project) {
-  projectContainer.innerHTML +=
+  projectContainer.insertAdjacentHTML("beforeend",
     '<div class="project flex-centered">' +
       '<div class="header flex-centered">' +
         '<h3 class="project-title">' +
@@ -397,7 +397,7 @@ function generateWindow(project) {
         '</div>' +
       '</div>' +
     '</div>'
-  ;
+  );
 }
 
 projectsArray.forEach((project) => {
@@ -425,17 +425,27 @@ for (let i = 0; i < filterBtn.length; i++) {
 
     // DISPLAY FILTERED PROJECTS
     if (tagFilter === "all") {
-      projectContainer.innerHTML = "";
+      while (projectContainer.firstChild) {
+        projectContainer.firstChild.remove();
+      }
 
       projectsArray.forEach((project) => {
         generateWindow(project);
       });
+
+      addProjectsEvents();
+      addModalEvents();
     } else {
-      projectContainer.innerHTML = "";
+      while (projectContainer.firstChild) {
+        projectContainer.firstChild.remove();
+      }
 
       filteredProjects.forEach((project) => {
         generateWindow(project);
       });
+
+      addProjectsEvents();
+      addModalEvents();
     }
   });
 }
@@ -503,7 +513,7 @@ function generateModal(project) {
   // But it is a string so we need to get the corresponding object
   project = projectsArray.find(({id}) => id === project);
 
-  modalOverlay.innerHTML =
+  modalOverlay.insertAdjacentHTML("beforeend",
     '<div id="project-details">' +
       '<div class="carousel-wrapper flex-centered">' +
         '<div id="carousel-items">' + 
@@ -540,6 +550,6 @@ function generateModal(project) {
         '</div>' +
       '</article>' +
     '</div>'
-  ;
+  );
 }
 

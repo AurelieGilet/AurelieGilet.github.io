@@ -76,18 +76,24 @@ homepageBtn.addEventListener("click", function () {
 });
 
 // PROJECTS OVERLAY
-const body = document.getElementsByClassName("body");
-const overlay = document.getElementsByClassName("overlay");
+// we create a function to be called in projects-data.js when changing HTML content at 427
+function addProjectsEvents() {
+  const body = document.getElementsByClassName("body");
+  const overlay = document.getElementsByClassName("overlay");
 
-for (let i = 0; i < body.length; i++) {
-  body[i].addEventListener("mouseover", function () {
-    overlay[i].style.display = "flex";
-  });
+  for (let i = 0; i < body.length; i++) {
+    body[i].addEventListener("mouseover", function () {
+      overlay[i].style.display = "flex";
+    });
 
-  body[i].addEventListener("mouseout", function () {
-    overlay[i].style.display = "none";
-  });
+    body[i].addEventListener("mouseout", function () {
+      overlay[i].style.display = "none";
+    });
+  }
 }
+
+addProjectsEvents();
+
 
 // PROJECTS TECHNOLOGY SORTING
 function getElementWidth(element) {
@@ -171,71 +177,75 @@ for (let i = 0; i < technologyList.length; i++) {
 }
 
 // GENERATE PROJECT DETAILS MODAL
-const openModalBtn = document.getElementsByClassName("more-btn");
-const modal = document.getElementById("project-wrapper");
-const HTMLBody = document.getElementsByTagName("body");
+function addModalEvents()  {
+  const openModalBtn = document.getElementsByClassName("more-btn");
+  const modal = document.getElementById("project-wrapper");
+  const HTMLBody = document.getElementsByTagName("body");
 
-for (let i = 0; i < openModalBtn.length; i++) {
-  openModalBtn[i].addEventListener("click", function () {
-    generateModal(this.dataset.project);
+  for (let i = 0; i < openModalBtn.length; i++) {
+    openModalBtn[i].addEventListener("click", function () {
+      generateModal(this.dataset.project);
 
-    modal.style.display = "flex";
-    HTMLBody[0].classList.add("hide-scroll");
+      modal.style.display = "flex";
+      HTMLBody[0].classList.add("hide-scroll");
 
-    // PROJECT DETAILS CAROUSEL
-    const leftArrow = document.getElementById("arrow-left");
-    const rightArrow = document.getElementById("arrow-right");
-    const dots = document.getElementsByClassName("dot");
+      // PROJECT DETAILS CAROUSEL
+      const leftArrow = document.getElementById("arrow-left");
+      const rightArrow = document.getElementById("arrow-right");
+      const dots = document.getElementsByClassName("dot");
 
-    let slideIndex = 1;
+      let slideIndex = 1;
 
-    leftArrow.addEventListener("click", () => plusSlide(-1));
-    rightArrow.addEventListener("click", () => plusSlide(+1));
-
-    for (let i = 0; i < dots.length; i++) {
-      dots[i].addEventListener("click", () => currentSlide(i + 1));
-    }
-
-    function plusSlide(n) {
-      showSlide((slideIndex += n));
-    }
-
-    function currentSlide(n) {
-      showSlide((slideIndex = n));
-    }
-
-    function showSlide(n) {
-      const slides = document.getElementsByClassName("slide");
-
-      if (n > slides.length) {
-        slideIndex = 1;
-      }
-
-      if (n < 1) {
-        slideIndex = slides.length;
-      }
-
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
+      leftArrow.addEventListener("click", () => plusSlide(-1));
+      rightArrow.addEventListener("click", () => plusSlide(+1));
 
       for (let i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+        dots[i].addEventListener("click", () => currentSlide(i + 1));
       }
 
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-    }
+      function plusSlide(n) {
+        showSlide((slideIndex += n));
+      }
 
-    // CLOSE PROJECT DETAILS MODAL
-    const closeModalBtn = document.getElementById("close");
+      function currentSlide(n) {
+        showSlide((slideIndex = n));
+      }
 
-    if (closeModalBtn) {
-      closeModalBtn.addEventListener("click", function () {
-        modal.style.display = "none";
-        modal.innerHTML = "";
-        HTMLBody[0].classList.remove("hide-scroll");
-      });
-    }
-  });
+      function showSlide(n) {
+        const slides = document.getElementsByClassName("slide");
+
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+
+        for (let i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+
+        for (let i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+
+      // CLOSE PROJECT DETAILS MODAL
+      const closeModalBtn = document.getElementById("close");
+
+      if (closeModalBtn) {
+        closeModalBtn.addEventListener("click", function () {
+          modal.style.display = "none";
+          modal.removeChild(modal.lastChild);
+          HTMLBody[0].classList.remove("hide-scroll");
+        });
+      }
+    });
+  }
 }
+
+addModalEvents();
