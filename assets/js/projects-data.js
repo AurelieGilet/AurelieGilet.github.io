@@ -19,7 +19,7 @@ const charnetDeSante = new Project({
     "Ce projet a été développé avec le framework <em>SYMFONY</em> (v.5.3) et utilise <em>HTML5</em>, <em>TWIG</em>, <em>CSS3</em>, <em>JAVASCRIPT</em>, <em>PHP</em> et <em>MYSQL</em>.",
   ],
   technology: ["HTML5", "CSS3", "JAVASCRIPT", "SYMFONY", "PHP", "MYSQL"],
-  tags: ["FULL-STACK", "JAVASCRIPT", "PHP"],
+  tags: ["full-stack", "javascript", "php"],
   website: "https://lecharnetdesante.life/",
   github: "https://github.com/AurelieGilet/charnet-de-sante",
   images: [
@@ -72,7 +72,7 @@ const blogHdm = new Project({
     "PHP",
     "DOCKER",
   ],
-  tags: ["FULL-STACK", "JAVASCRIPT", "PHP"],
+  tags: ["full-stack", "javascript", "php"],
   website: "https://www.hommedemetier.be/blog/",
   github: false,
   images: [
@@ -100,12 +100,12 @@ const misterNickel = new Project({
   title: "Mister Nickel",
   goal: "Projet réalisé durant mon stage en entreprise chez HDM Network. Je devais réaliser l'intégration d'une maquette de site pour un client de HDM.",
   description: [
-    "Selon la requête de HDM, ce site a été développé avec <em>HTML5</em>, <em>CSS3</em> et <em>JAVASCRIPT</em>",
+    "Selon la requête de HDM, ce site a été développé avec <em>HTML5</em>, <em>CSS3</em> et <em>JAVASCRIPT</em>.",
     "Le souhait de HDM était que ce site soit réalisé sans utiliser aucun framework.",
     "Il s'agit d'un site vitrine qui permet de présenter une entreprise de nettoyage, les services qu'elle propose ainsi que ses coordonnées et un formulaire de contact.",
   ],
   technology: ["HTML5", "CSS3", "JAVASCRIPT"],
-  tags: ["FRONT-END", "JAVASCRIPT"],
+  tags: ["front-end", "javascript"],
   website:
     "https://www.aurelie-gilet.com/HDM_projects/integration_mister-nickel",
   github: "https://github.com/AurelieGilet/HDM_projects",
@@ -130,12 +130,12 @@ const chapeau = new Project({
   title: "Chapeau",
   goal: "Projet réalisé durant mon stage en entreprise chez HDM Network. Je devais réaliser l'intégration d'une maquette de site pour le bar d'un partenaire de HDM.",
   description: [
-    "Selon la requête de HDM, ce site a été développé avec <em>HTML5</em>, <em>CSS3</em> et <em>JAVASCRIPT</em>",
+    "Selon la requête de HDM, ce site a été développé avec <em>HTML5</em>, <em>CSS3</em> et <em>JAVASCRIPT</em>.",
     "Le souhait de HDM était que ce site soit réalisé sans utiliser aucun framework.",
     "Il s'agit d'un site vitrine qui permet de présenter le bar, sa carte et ses coordonnées.",
   ],
   technology: ["HTML5", "CSS3", "JAVASCRIPT"],
-  tags: ["FRONT-END", "JAVASCRIPT"],
+  tags: ["front-end", "javascript"],
   website: "https://www.aurelie-gilet.com/HDM_projects/integration_chapeau",
   github: "https://github.com/AurelieGilet/HDM_projects",
   images: [
@@ -155,12 +155,12 @@ const pizzaMarco = new Project({
   title: "Pizza Marco",
   goal: "Projet réalisé durant mon stage en entreprise chez HDM Network. Je devais réaliser l'intégration d'une maquette de site pour le restaurant d'un partenaire de HDM.",
   description: [
-    "Selon la requête de HDM, ce site a été développé avec <em>HTML5</em>, <em>CSS3</em> et <em>JAVASCRIPT</em>",
+    "Selon la requête de HDM, ce site a été développé avec <em>HTML5</em>, <em>CSS3</em> et <em>JAVASCRIPT</em>.",
     "Le souhait de HDM était que ce site soit réalisé sans utiliser aucun framework.",
     "Il s'agit d'un site vitrine qui permet de présenter le restaurant, sa carte et ses coordonnées.",
   ],
   technology: ["HTML5", "CSS3", "JAVASCRIPT"],
-  tags: ["FRONT-END", "JAVASCRIPT"],
+  tags: ["front-end", "javascript"],
   website: "https://www.aurelie-gilet.com/HDM_projects/integration_pizza-marco",
   github: "https://github.com/AurelieGilet/HDM_projects",
   images: [
@@ -180,12 +180,12 @@ const nostimia = new Project({
   title: "Nostimia",
   goal: "Projet réalisé durant mon stage en entreprise chez HDM Network. Je devais réaliser l'intégration d'une maquette de site pour le restaurant d'un partenaire de HDM.",
   description: [
-    "Selon la requête de HDM, ce site a été développé avec <em>HTML5</em>, <em>CSS3</em> et <em>JAVASCRIPT</em>",
+    "Selon la requête de HDM, ce site a été développé avec <em>HTML5</em>, <em>CSS3</em> et <em>JAVASCRIPT</em>.",
     "Le souhait de HDM était que ce site soit réalisé sans utiliser aucun framework.",
     "Il s'agit d'un site vitrine qui permet de présenter le restaurant, sa carte et ses coordonnées.",
   ],
   technology: ["HTML5", "CSS3", "JAVASCRIPT"],
-  tags: ["FRONT-END", "JAVASCRIPT"],
+  tags: ["front-end", "javascript"],
   website: "https://www.aurelie-gilet.com/HDM_projects/integration_nostimia",
   github: "https://github.com/AurelieGilet/HDM_projects",
   images: [
@@ -205,12 +205,12 @@ const pippoEtFils = new Project({
   title: "Pippo & Fils",
   goal: "Projet réalisé durant mon stage en entreprise chez HDM Network. Je devais réaliser l'intégration d'une maquette de site pour le restaurant d'un partenaire de HDM.",
   description: [
-    "Selon la requête de HDM, ce site a été développé avec <em>HTML5</em>, <em>CSS3</em> et <em>JAVASCRIPT</em>",
+    "Selon la requête de HDM, ce site a été développé avec <em>HTML5</em>, <em>CSS3</em> et <em>JAVASCRIPT</em>.",
     "Le souhait de HDM était que ce site soit réalisé sans utiliser aucun framework.",
     "Il s'agit d'un site vitrine qui permet de présenter le restaurant, sa carte et ses coordonnées.",
   ],
   technology: ["HTML5", "CSS3", "JAVASCRIPT"],
-  tags: ["FRONT-END", "JAVASCRIPT"],
+  tags: ["front-end", "javascript"],
   website:
     "https://www.aurelie-gilet.website/HDM_projects/integration_Pippo%26Fils",
   github: "https://github.com/AurelieGilet/HDM_projects",
@@ -246,7 +246,7 @@ const JeuxPartage = new Project({
     "PHP",
     "MYSQL",
   ],
-  tags: ["BACK-END", "JAVASCRIPT", "PHP"],
+  tags: ["back-end", "javascript", "php"],
   website: "https://jeux-partage.epizy.com",
   github: "https://github.com/AurelieGilet/wf3_group_project",
   images: [
@@ -285,7 +285,7 @@ const agenceImmobiliere = new Project({
     "Les logements sont affichés avec leurs détails pour une consultation des visiteurs dans le front-office.",
   ],
   technology: ["HTML5", "BOOTSTRAP", "PHP", "MYSQL"],
-  tags: ["FULL-STACK", "BACK-END", "PHP"],
+  tags: ["full-stack", "back-end", "php"],
   website: "https://aurelie-gilet.epizy.com/site_immobilier/index.php",
   github:
     "https://github.com/AurelieGilet/AurelieGilet.github.io/tree/master/site_immobilier",
@@ -317,7 +317,7 @@ const carRent = new Project({
     "La réalisation de ce site était soumise à une limite de temps (5h).",
   ],
   technology: ["HTML5", "CSS3", "BOOTSTRAP", "JAVASCRIPT", "JQUERY"],
-  tags: ["FRONT-END", "JAVASCRIPT"],
+  tags: ["front-end", "javascript"],
   website: "site_car-rent",
   github:
     "https://github.com/AurelieGilet/AurelieGilet.github.io/tree/master/site_car-rent",
@@ -342,7 +342,7 @@ const boutiqueSport = new Project({
     "Sa réalisation était soumise à une limite de temps (4h).",
   ],
   technology: ["HTML5", "CSS3", "BOOTSTRAP"],
-  tags: ["FRONT-END"],
+  tags: ["front-end"],
   website: "site_boutique-sport",
   github:
     "https://github.com/AurelieGilet/AurelieGilet.github.io/tree/master/site_boutique-sport",
@@ -403,6 +403,42 @@ function generateWindow(project) {
 projectsArray.forEach((project) => {
   generateWindow(project);
 });
+
+// PROJECTS FILTER
+const filterBtn = document.getElementsByClassName("filter-btn");
+
+for (let i = 0; i < filterBtn.length; i++) {
+  filterBtn[i].addEventListener("click", function() {
+    // CHANGE BUTTON APPEARANCE
+    let filtered = document.getElementsByClassName("filtered");
+
+    if (filtered.length > 0) {
+      filtered[0].className = filtered[0].className.replace(" filtered", "");
+    }
+
+    this.className += " filtered";
+
+    // FILTER PROJECTS
+    let tagFilter = this.dataset.tag;
+
+    let filteredProjects = projectsArray.filter(({tags}) => tags.includes(tagFilter));
+
+    // DISPLAY FILTERED PROJECTS
+    if (tagFilter === "all") {
+      projectContainer.innerHTML = "";
+
+      projectsArray.forEach((project) => {
+        generateWindow(project);
+      });
+    } else {
+      projectContainer.innerHTML = "";
+
+      filteredProjects.forEach((project) => {
+        generateWindow(project);
+      });
+    }
+  });
+}
 
 // PROJECT DETAILS MODAL DISPLAY
 const modalOverlay = document.getElementById("project-wrapper");

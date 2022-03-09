@@ -58,10 +58,10 @@ for (let i = 0; i < navListItems.length; i++) {
     let selected = document.getElementsByClassName("selected");
 
     if (selected.length > 0) {
-      selected[0].className = selected[0].className.replace("selected", "");
+      selected[0].className = selected[0].className.replace(" selected", "");
     }
 
-    this.className += "selected";
+    this.className += " selected";
   });
 }
 
@@ -69,10 +69,10 @@ homepageBtn.addEventListener("click", function () {
   let selected = document.getElementsByClassName("selected");
 
   if (selected.length > 0) {
-    selected[0].className = selected[0].className.replace("selected", "");
+    selected[0].className = selected[0].className.replace(" selected", "");
   }
 
-  navListItems[1].className += "selected";
+  navListItems[1].className += " selected";
 });
 
 // PROJECTS OVERLAY
