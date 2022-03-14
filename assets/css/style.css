@@ -79,7 +79,6 @@ html {
 }
 
 /***** UTILITIES ******/
-
 body {
     min-width: 320px;
     min-height: 100vh;
@@ -87,6 +86,13 @@ body {
 
 .flex-centered {
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-centered-column {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -128,13 +134,8 @@ body {
 }
 
 /***** LANDING PAGE ******/
-
 #home {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 40px;
 }
 
@@ -148,6 +149,7 @@ body {
     margin-left: 10px;
     transition: transform .2s ease-in-out;
 }
+
 /***** MAIN *****/
 main {
     min-height: 100vh;
@@ -166,7 +168,6 @@ nav {
 
 /* BURGER BUTTON */
 #burger-btn {
-    flex-direction: column;
     align-self: center;
     position: absolute;
     right: 20px;
@@ -201,9 +202,6 @@ nav {
     width: 100%;
     height: fit-content;
     display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: var(--haiti);
     border-top: 1px solid #3D3351;
     box-shadow: 0px 4px 4px var(--haiti);
@@ -229,12 +227,10 @@ nav {
 /***** ABOUT *****/
 #about {
     min-height: 100vh;
-    flex-direction: column;
     padding: 95px 40px 40px 40px;
 }
 
 .container {
-    flex-direction: column;
     width: 100%;
 }
 
@@ -287,7 +283,6 @@ aside svg:active {
 /***** PORTFOLIO *****/
 #portfolio {
     min-height: 100vh;
-    flex-direction: column;
     padding: 95px 40px 40px 40px;
 }
 
@@ -301,7 +296,6 @@ aside svg:active {
 }
 
 .content {
-    flex-direction: column;
     width: 100%;
     padding: 40px 0;
 }
@@ -309,7 +303,6 @@ aside svg:active {
 /* PROJECTS WINDOW DISPLAY */
 
 .project {
-    flex-direction: column;
     width: 300px;
     height: 200px;
     margin: 20px 0;
@@ -412,7 +405,6 @@ aside svg:active {
 .carousel-wrapper {
     width: 100%;
     aspect-ratio: 16/9;
-    flex-direction: column;
     position: relative;
     box-shadow: 0px 4px 4px var(--haiti);
 }
@@ -491,10 +483,7 @@ aside svg:active {
 /* CONTENT */
 #project-details article {
     width: 100%;
-    display: flex;
     flex: 1 1 auto;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-between;
     text-align: center; 
     overflow: auto; 
@@ -551,7 +540,6 @@ footer p {
 
 
 /***** RESPONSIVE *****/
-
 @media screen and (min-width: 425px) {
     /***** PORTFOLIO ******/
     #project-details {
