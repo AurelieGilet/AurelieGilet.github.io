@@ -1,0 +1,310 @@
+/***** FONTS ******/
+@font-face {
+    font-family: 'DarumaDropOne';
+    src: url('/assets/fonts/daruma-drop-one-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Schoolbell';
+    src: url('/assets/fonts/Schoolbell-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GloriaHallelujah';
+    src: url('/assets/fonts/GloriaHallelujah-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: Schoolbell;
+}
+
+h1, h2, h3 {
+    font-family: DarumaDropOne;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+}
+
+h2, h3 {
+    font-size: 1.3rem;
+}
+
+/***** COLORS ******/
+:root {
+    --haiti: #201534;
+    --ebony-clay: #2B1C47;
+    --rebecca-purple : #663399;
+    --royal-fuchsia : #C22492;
+    --platinum : #E5E4E2;
+    --gunsmoke : #898884;
+}
+
+body {
+    background-color: var(--ebony-clay);
+    color: var(--haiti);
+}
+
+/***** SCROLLBAR  ******/
+html {
+	scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--ebony-clay);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--haiti);
+}
+
+/***** UTILITIES ******/
+body {
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+.flex-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-centered-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.desktop {
+    display: none;
+}
+
+/***** PAGE ******/
+.container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.useful-width {
+    width: 90%;
+    padding: 60px 0;
+    position: relative;
+}
+
+/* TOP BUTTONS */
+.button {
+    background-color: var(--royal-fuchsia);
+    padding: 5px 10px;
+    border-radius: 0 0 5px 5px;
+    cursor: pointer;
+}
+
+.portfolio {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pdf {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.pdf svg, .portfolio svg {
+    margin-left: 10px;
+}
+
+/***** MAIN *****/
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    border: 5px inset var(--royal-fuchsia);
+    border-radius: 5px;
+    -webkit-box-shadow: inset 3px 3px 4px 0px var(--haiti), 4px 4px 5px 0px var(--haiti); 
+    box-shadow: inset 3px 3px 4px 0px var(--haiti), 4px 4px 5px 0px var(--haiti);
+    padding: 10px;
+}
+
+.banner {
+    width: calc(100% - 20px);
+    position: absolute;
+    z-index: 0;
+}
+
+#wrapper {
+    z-index: 10;
+}
+
+/*** HEADER ***/
+/* TITLE */
+.cv-banner {
+    justify-content: flex-end;
+}
+
+.cv-title {
+    text-align: center;
+    width: 100%;
+}
+
+.cv-title h2 {
+    font-family: GloriaHallelujah;
+    margin-top: 5px;
+}
+
+.cv-banner img {
+    width: 75px;
+    height: auto;
+    border: 2px solid var(--rebecca-purple);
+    filter: drop-shadow(5px 5px 5px rgba(102, 51, 153, 0.25));
+}
+
+/* NAV */
+nav {
+    margin: 20px 0;
+}
+
+.cv-nav {
+    justify-content: space-evenly;
+}
+
+.cv-nav li {
+    cursor: pointer;
+    font-family: GloriaHallelujah;
+    font-weight: bold;
+}
+
+.cv-nav li svg {
+    font-size: 1.8rem;
+    color: var(--rebecca-purple);
+    margin: 10px 0;
+}
+
+/*** SECTIONS ***/
+section {
+    width: 100%;
+}
+
+section h4 {
+    font-family: schoolbell;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* ABOUT */
+#about {
+    margin: 10px 0;
+}
+
+#about p{
+    margin-bottom: 10px;
+}
+
+/* SKILLS */
+#skills {
+    margin-bottom: 10px;
+}
+
+#skills ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ul-langages:before {
+    content: attr(aria-label);
+    padding-left: 5px;
+}
+
+#skills li {
+    padding: 5px;
+}
+
+#skills img {
+    width: 20px;
+    height: auto;
+    margin-right: 5px;
+}
+
+#skills em {
+    font-weight: bold;
+}
+
+/*** ASIDE ***/
+aside {
+    width: 100%;
+}
+
+aside article {
+    width: 100%;
+    background-color: rgba(102, 51, 153, 0.1);
+    box-shadow: 4px 4px 4px var(--rebecca-purple);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+aside article h3 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+aside article h4 {
+    font-family: DarumaDropOne;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+aside article li {
+    padding: 5px;
+    vertical-align: middle;
+}
+
+aside article a {
+    text-decoration: underline;
+}
+
+aside article svg {
+    font-size: 1.2rem;
+    margin-right: 5px;
+    color: var(--rebecca-purple);
+}
+
+/* WORK EXPERIENCES */
+.li-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.job-date {
+    color: var(--royal-fuchsia);
+}
+
+.li-content div {
+    margin: 2px 0;
+}
+
+.job-title {
+    font-family: DarumaDropOne;
+}
+
+.job-employer {
+    font-family: GloriaHallelujah;
+}
+
+/***** RESPONSIVE *****/
+@media screen and (min-width: 1024px) {
+    .desktop {
+        display: block;
+    }
+}
