@@ -24,7 +24,7 @@ h1, h2, h3 {
     letter-spacing: 0.1rem;
 }
 
-button, #nav-list, #filter-list {
+.button, #nav-list, #filter-list {
     font-family: Schoolbell;
     cursor: pointer;
     font-size: 1.2rem;
@@ -235,11 +235,11 @@ nav {
 }
 
 /* ARTICLE */
-#about article {
+.intro {
     text-align: center;
 }
 
-#about article p {
+.intro p {
     margin: 20px 0;
 }
 
@@ -597,7 +597,7 @@ footer p {
         justify-content: space-between;
         max-width: 900px;
     }
-    #about article {
+    .intro {
         text-align: left;
         padding-left: 30px;
         max-width: 600px;

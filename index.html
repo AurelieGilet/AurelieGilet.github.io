@@ -21,10 +21,10 @@
                 Je suis développeuse Web full-stack.
             </h1>
             <a href="#about">
-                <button id="homepage-btn" class="button flex-centered">
+                <div id="homepage-btn" class="button flex-centered">
                     Voir mon travail
                     <i id ="homepage-btn-arrow" class="fa-solid fa-arrow-right"></i>
-                </button>
+                </div>
             </a>
         </section>
         <main>
@@ -35,15 +35,15 @@
                     <div class="bar3"></div>
                 </div>
                 <ul id="nav-list" class="flex-centered-column">
-                    <a href="#home">
-                        <li>ACCUEIL</li>
-                    </a>
-                    <a href="#about">
-                        <li>A PROPOS</li>
-                    </a>
-                    <a href="#portfolio">
-                        <li>PORTFOLIO</li>
-                    </a>
+                    <li>
+                        <a href="#home">ACCUEIL</a>
+                    </li>
+                    <li>
+                        <a href="#about">A PROPOS</a>
+                    </li>
+                    <li>
+                        <a href="#portfolio">PORTFOLIO</a>
+                    </li>
                 </ul>
             </nav>
             <section id="about" class="flex-centered-column">
@@ -52,7 +52,7 @@
                     <div class="line"></div>
                 </div>
                 <div class="container flex-centered-column">
-                    <article>
+                    <div class="intro">
                         <p>
                             Je suis une développeuse web full-stack.<br>
                             Je code principalement en <em>HTML</em>, <em>CSS</em>, <em>JavaScript</em> et <em>PHP</em>.<br>
@@ -67,7 +67,7 @@
                         <p class="small">
                             J’ai aussi une légère obsession pour la couleur violette...
                         </p>
-                    </article>
+                    </div>
                     <aside>
                         <div class="picture">
                             <img src="/assets/img/photo_portfolio.jpg" alt="Photo d'Aurélie Gilet">
@@ -85,7 +85,7 @@
                         </div>
                         <!-- TODO : new CV -->
                         <div class="flex-centered">
-                            <a href="assets/docs/cv_aurelie-gilet.pdf">
+                            <a href="cv.html">
                                 <svg viewBox="0 0 23 26" width="60" height="70" preserveAspectRatio="xMidYMid meet" version="1.1" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
                                     <title>Consultez mon CV</title>
                                     <path fill="currentColor" d="M3 24h19v-23h-1v22h-18v1zm17-24h-18v22h18v-22zm-1 1h-16v20h16v-20zm-2 16h-12v1h12v-1zm0-3h-12v1h12v-1zm0-3h-12v1h12v-1zm-7.348-3.863l.948.3c-.145.529-.387.922-.725 1.178-.338.257-.767.385-1.287.385-.643 0-1.171-.22-1.585-.659-.414-.439-.621-1.04-.621-1.802 0-.806.208-1.432.624-1.878.416-.446.963-.669 1.642-.669.592 0 1.073.175 1.443.525.221.207.386.505.496.892l-.968.231c-.057-.251-.177-.449-.358-.594-.182-.146-.403-.218-.663-.218-.359 0-.65.129-.874.386-.223.258-.335.675-.335 1.252 0 .613.11 1.049.331 1.308.22.26.506.39.858.39.26 0 .484-.082.671-.248.187-.165.322-.425.403-.779zm3.023 1.78l-1.731-4.842h1.06l1.226 3.584 1.186-3.584h1.037l-1.734 4.842h-1.044z"/>
