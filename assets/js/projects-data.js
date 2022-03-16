@@ -373,7 +373,7 @@ function generateTechnologyList(project) {
 
 function generateWindow(project) {
   projectContainer.insertAdjacentHTML("beforeend",
-    '<div class="project flex-centered">' +
+    '<div class="project flex-centered-column">' +
       '<div class="header flex-centered">' +
         '<h3 class="project-title">' +
           project.title +
@@ -515,7 +515,7 @@ function generateModal(project) {
 
   modalOverlay.insertAdjacentHTML("beforeend",
     '<div id="project-details">' +
-      '<div class="carousel-wrapper flex-centered">' +
+      '<div class="carousel-wrapper flex-centered-column">' +
         '<div id="carousel-items">' + 
           generateCarrouselImages(project) + 
         '</div>' +
@@ -531,7 +531,7 @@ function generateModal(project) {
           generateCarrouselDotIndicators(project) +
         '</div>' +
       '</div>' +
-      '<article>' +
+      '<article class="flex-centered-column">' +
         '<h3 id="project-title">' + project.title + '</h3>' +
         '<p id="project-goal">' + project.goal + '</p>' +
         '<div id="project-description">' +
@@ -542,8 +542,8 @@ function generateModal(project) {
             '<button class="button flex-centered"> Voir le site' +
                 '<i class="fa-solid fa-share-from-square"></i>' +
             '</button>' +
-            '</a>' +
-            generateGithubBtn(project)   +
+          '</a>' +
+          generateGithubBtn(project)   +
         '</div>' +
         '<div id="close">' +
             '<i class="fa-solid fa-xmark"></i>' +
