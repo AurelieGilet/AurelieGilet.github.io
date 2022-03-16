@@ -24,10 +24,12 @@
                         <i class="fa-solid fa-arrow-rotate-left"></i>
                     </div>
                 </a>
-                <div class="button pdf">
-                    PDF
-                    <i class="fa-solid fa-cloud-arrow-down"></i>
-                </div>
+                <a href="assets/docs/cv_aurelie-gilet.pdf">
+                    <div class="button pdf">
+                        PDF
+                        <i class="fa-solid fa-cloud-arrow-down"></i>
+                    </div>
+                </a>
                 <main>
                     <img class="banner" src="assets/img/cv/cv-bg.jpg" alt="">
                     <div id="wrapper">
@@ -77,8 +79,8 @@
                                 </ul>
                             </nav>
                         </header>
-                        <div class="flex-centered-column">
-                            <div class="flex-centered-column">
+                        <div id="cv-main" class="flex-centered-column">
+                            <div id="cv-content" class="flex-centered-column">
                                 <section id="about">
                                     <h3>A PROPOS</h3>
                                     <p>Je suis une développeuse fullstack spécialisée sur le framework Symfony. Aussi à l'aise en front qu'en back, avec Javascript ou PHP.</p>
@@ -227,15 +229,19 @@
                                 <article>
                                     <h3>DIPLÔMES</h3>
                                     <ul>
-                                        <li>
+                                        <li class="li-diploma">
                                             <i class="fa-solid fa-graduation-cap"></i>
-                                            Développeur Web et Web mobile <br>
-                                            Titre RNCP Bac+2
+                                            <p>
+                                                Développeur Web et Web mobile <br>
+                                                Titre RNCP Bac+2
+                                            </p>
                                         </li>
-                                        <li>
+                                        <li class="li-diploma">
                                             <i class="fa-solid fa-graduation-cap"></i>
-                                            DAEU B (Bac S) <br>
-                                            Mention Très Bien
+                                            <p>
+                                                DAEU B (Bac S) <br>
+                                                Mention Très Bien
+                                            </p>
                                         </li>             
                                     </ul>
                                 </article>

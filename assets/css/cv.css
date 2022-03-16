@@ -24,8 +24,14 @@ h1, h2, h3 {
     letter-spacing: 0.1rem;
 }
 
-h2, h3 {
+h3 {
     font-size: 1.3rem;
+}
+
+h4 {
+    font-family: schoolbell;
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 /***** COLORS ******/
@@ -91,6 +97,7 @@ body {
 
 .useful-width {
     width: 90%;
+    max-width: 1240px;
     padding: 60px 0;
     position: relative;
 }
@@ -138,6 +145,8 @@ main {
     width: calc(100% - 20px);
     position: absolute;
     z-index: 0;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }
 
 #wrapper {
@@ -193,13 +202,6 @@ section {
     width: 100%;
 }
 
-section h4 {
-    font-family: schoolbell;
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-top: 5px;
-}
-
 /* ABOUT */
 #about {
     margin: 10px 0;
@@ -211,6 +213,10 @@ section h4 {
 
 /* SKILLS */
 #skills {
+    margin-bottom: 10px;
+}
+
+#skills article {
     margin-bottom: 10px;
 }
 
@@ -270,14 +276,19 @@ aside article li {
     vertical-align: middle;
 }
 
-aside article a {
-    text-decoration: underline;
-}
-
 aside article svg {
     font-size: 1.2rem;
     margin-right: 5px;
     color: var(--rebecca-purple);
+}
+
+.li-diploma {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.li-diploma p{
+    margin-left: 2px;
 }
 
 /* WORK EXPERIENCES */
@@ -303,8 +314,123 @@ aside article svg {
 }
 
 /***** RESPONSIVE *****/
+@media screen and (min-width: 768px) {
+    /***** UTILITIES ******/
+    h1, h2 {
+        font-size: 2.2rem;
+    }
+    #about h3, #skills h3 {
+        font-size: 2rem;
+    }
+    h4 {
+        font-size: 1.8rem;
+    }
+    #about p, #skills li {
+        font-size: 1.2rem;
+    }
+    /***** HEADER *****/
+    /* TITLE */
+    .cv-banner img {
+        width: 175px;
+    }
+    /* NAV */
+    .cv-nav {
+        font-size: 1.2rem;
+    }
+
+    .cv-nav li svg {
+        font-size: 2.5rem;
+    }
+    /***** SECTIONS *****/
+    #cv-main {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    #cv-content {
+        margin-right: 10px;
+    }
+    #skills article {
+        margin-bottom: 20px;
+    }
+    #skills img {
+        width: 25px;
+    }
+    /* ASIDE */
+    aside {
+        min-width: 265px;
+        margin-top: 20px;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .desktop {
         display: block;
     }
+    /***** MAIN *****/
+    main {
+        padding: 30px;
+    }
+    .banner {
+        width: calc(100% - 60px);
+        position: absolute;
+        z-index: 0;
+    }
+    /***** SECTIONS *****/
+    #cv-content {
+        margin-right: 20px;
+    }
+    /* ASIDE */
+    aside {
+        min-width: 365px;
+    }
 }
+
+@media screen and (min-width: 1380px) {
+    /***** UTILITIES ******/
+    h1, h2 {
+        font-size: 3rem;
+    }
+    #about h3, #skills h3 {
+        font-size: 2.2rem;
+    }
+    h4 {
+        font-size: 1.8rem;
+    }
+    #about p, #skills li {
+        font-size: 1.4rem;
+    }
+    /***** HEADER *****/
+    /* TITLE */
+    .cv-banner img {
+        width: 250px;
+    }
+    /* NAV */
+    .cv-nav {
+        font-size: 1.7rem;
+    }
+
+    .cv-nav li svg {
+        font-size: 3rem;
+    }
+    /***** SECTIONS *****/
+    #cv-content {
+        margin-right: 100px;
+    }
+    #skills li {
+        padding: 5px 10px;
+    }
+    #skills img {
+        width: 30px;
+    }
+    /* ASIDE */
+    aside article h3 {
+        font-size: 1.4rem;
+    }
+    aside article h4 {
+        font-size: 1.3rem;
+    }
+    aside article li {
+        font-size: 1.2rem;
+    }
+}
+
