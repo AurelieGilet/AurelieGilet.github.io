@@ -215,13 +215,12 @@ nav {
     z-index: 10;
 }
 
-#nav-list li {
-    line-height: 3;
+#nav-list li:hover {
+    transform: translateY(-2px);
 }
 
-#nav-list li:hover, .selected {
+#nav-list a:hover, .selected {
     color: var(--royal-fuchsia);
-    transform: translateY(-2px);
 }
 
 /***** ABOUT *****/
