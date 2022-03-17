@@ -306,6 +306,7 @@ aside svg:active {
     width: 300px;
     height: 200px;
     margin: 20px 0;
+    box-shadow: 4px 4px 4px var(--haiti);
 }
 
 .header {
