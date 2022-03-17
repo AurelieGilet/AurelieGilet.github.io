@@ -51,8 +51,8 @@ function menuDisplay() {
 }
 
 // MENU SELECTED COLOR
-const navListItems = navList.getElementsByTagName("li");
-
+const navListItems = navList.getElementsByTagName("a");
+console.log(navListItems);
 for (let i = 0; i < navListItems.length; i++) {
   navListItems[i].addEventListener("click", function () {
     let selected = document.getElementsByClassName("selected");
