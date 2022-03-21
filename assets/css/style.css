@@ -215,6 +215,10 @@ nav {
     z-index: 10;
 }
 
+#nav-list li {
+    margin: 10px 0;
+}
+
 #nav-list li:hover {
     transform: translateY(-2px);
 }
@@ -305,7 +309,8 @@ aside svg:active {
     width: 300px;
     height: 200px;
     margin: 20px 0;
-    box-shadow: 4px 4px 4px var(--haiti);
+    border: 2px outset var(--platinum);
+    box-shadow: 5px 5px 5px var(--haiti);
 }
 
 .header {

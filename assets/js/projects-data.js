@@ -10,6 +10,42 @@ class Project {
   }
 }
 
+const portfolio = new Project({
+  id: "portfolio",
+  title: "Portfolio",
+  goal: "Portfolio personnel ayant pour but de parler un peu de moi et des projets que j'ai développés.",
+  description: [
+    "Il a été développé avec du pur <em>HTML5</em>, <em>CSS3</em> et <em>JAVASCRIPT</em>, sans aucun framework, l'objectif étant de démontrer mes connaissances et capacités avec ces langages qui sont la base du développement web.",
+    "Ne souhaitant pas avoir recours à un serveur pour l'hébergement d'un site avec une base de données, mais pouvoir tout de même avoir un site dynamique, j'ai \"stocké\" les données des projets dans un fichier JS.",
+  ],
+  technology: ["HTML5", "CSS3", "JAVASCRIPT"],
+  tags: ["front-end", "javascript"],
+  website: false,
+  github: "https://github.com/AurelieGilet/AurelieGilet.github.io",
+  images: [
+    "/assets/img/projects/portfolio/portfolio-website.jpg",
+    "/assets/img/projects/portfolio/portfolio-website2.jpg",
+    "/assets/img/projects/portfolio/portfolio-website3.jpg",
+    "/assets/img/projects/portfolio/portfolio-website4.jpg",
+    "/assets/img/projects/portfolio/portfolio-mobile.jpg",
+    "/assets/img/projects/portfolio/portfolio-mobile2.jpg",
+    "/assets/img/projects/portfolio/portfolio-mobile3.jpg",
+    "/assets/img/projects/portfolio/portfolio-mobile4.jpg",
+  ],
+  altAttribute: [
+    "Image montrant la section \"à propos\" de la version desktop du portfolio",
+    "Image montrant la section \"portfolio\" de la version desktop du portfolio",
+    "Image montrant le détail d'un des projets de la version desktop du portfolio",
+    "Image montrant le détail d'un des projets de la version desktop du portfolio",
+    "Image montrant la page du CV de la version desktop du portfolio",
+    "Image montrant la section \"à propos\" de la version mobile du portfolio",
+    "Image montrant la section \"portfolio\" de la version mobile du portfolio",
+    "Image montrant le détail d'un des projets de la version mobile du portfolio",
+    "Image montrant le détail d'un des projets de la version mobile du portfolio",
+    "Image montrant la page du CV de la version mobile du portfolio",
+  ],
+});
+
 const charnetDeSante = new Project({
   id: "charnetDeSante",
   title: "Le Charnet de Santé",
@@ -57,7 +93,7 @@ const charnetDeSante = new Project({
 
 const blogHdm = new Project({
   id: "blogHdm",
-  title: "Blog Homme de Métier",
+  title: "Blog HDM",
   goal: "Projet réalisé durant mon stage en entreprise chez HDM Network. Il s'agit d'un blog faisant partie du site \"Homme de Métier\", permettant de rédiger des articles de conseils sur les travaux réalisables chez soi.",
   description: [
     "J'ai travaillé sur ce projet en équipe agile. Mes tâches ont été de développer la partie back-office (front et back-end) permettant la rédaction des articles et l'ajout des photos l'illustrant, de créer un accès sécurisé avec un compte administrateur au back-office et de réécrire toutes les fonctions JAVASCRIPT du site selon le modèle IIFE.",
@@ -492,6 +528,22 @@ function generateProjectDescription(project) {
   return content;
 }
 
+// All projects don't necessarily have a website address associated
+function generateWebsiteBtn(project) {
+  let websiteBtn = "";
+
+  if (project.website != false) {
+    websiteBtn = 
+      '<a href="' + project.website + '">' +
+          '<button class="button flex-centered"> Voir le site' +
+            '<i class="fa-solid fa-share-from-square"></i>' +
+          '</button>' +
+      '</a>';
+  }
+
+  return websiteBtn;
+}
+
 // All projects don't necessarily have a github repository associated
 function generateGithubBtn(project) {
   let githubBtn = "";
@@ -538,12 +590,8 @@ function generateModal(project) {
           generateProjectDescription(project) +
         '</div>' +
         '<div class="access flex-centered">' +
-          '<a href="' + project.website + '"> ' +
-            '<button class="button flex-centered"> Voir le site' +
-                '<i class="fa-solid fa-share-from-square"></i>' +
-            '</button>' +
-          '</a>' +
-          generateGithubBtn(project)   +
+          generateWebsiteBtn(project) +
+          generateGithubBtn(project) +
         '</div>' +
         '<div id="close">' +
             '<i class="fa-solid fa-xmark"></i>' +
