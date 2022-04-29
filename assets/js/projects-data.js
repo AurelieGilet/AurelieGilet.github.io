@@ -143,7 +143,7 @@ const misterNickel = new Project({
   technology: ["HTML5", "CSS3", "JAVASCRIPT"],
   tags: ["front-end", "javascript"],
   website:
-    "https://www.aurelie-gilet.com/HDM_projects/integration_mister-nickel",
+    "https://www.aurelie-gilet.website/HDM_projects/integration_mister-nickel",
   github: "https://github.com/AurelieGilet/HDM_projects",
   images: [
     "/assets/img/projects/mister-nickel/mister-nickel-website.jpg",
@@ -172,7 +172,7 @@ const chapeau = new Project({
   ],
   technology: ["HTML5", "CSS3", "JAVASCRIPT"],
   tags: ["front-end", "javascript"],
-  website: "https://www.aurelie-gilet.com/HDM_projects/integration_chapeau",
+  website: "https://www.aurelie-gilet.website/HDM_projects/integration_chapeau",
   github: "https://github.com/AurelieGilet/HDM_projects",
   images: [
     "/assets/img/projects/chapeau/chapeau-website.jpg",
@@ -197,7 +197,7 @@ const pizzaMarco = new Project({
   ],
   technology: ["HTML5", "CSS3", "JAVASCRIPT"],
   tags: ["front-end", "javascript"],
-  website: "https://www.aurelie-gilet.com/HDM_projects/integration_pizza-marco",
+  website: "https://www.aurelie-gilet.website/HDM_projects/integration_pizza-marco",
   github: "https://github.com/AurelieGilet/HDM_projects",
   images: [
     "/assets/img/projects/pizza-marco/pizza-marco-website.jpg",
@@ -222,7 +222,7 @@ const nostimia = new Project({
   ],
   technology: ["HTML5", "CSS3", "JAVASCRIPT"],
   tags: ["front-end", "javascript"],
-  website: "https://www.aurelie-gilet.com/HDM_projects/integration_nostimia",
+  website: "https://www.aurelie-gilet.website/HDM_projects/integration_nostimia",
   github: "https://github.com/AurelieGilet/HDM_projects",
   images: [
     "/assets/img/projects/nostimia/nostimia-website.jpg",
