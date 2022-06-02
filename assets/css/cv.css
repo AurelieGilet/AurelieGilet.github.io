@@ -18,7 +18,7 @@ body {
     font-family: Schoolbell;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
     font-family: DarumaDropOne;
     font-size: 1.4rem;
     letter-spacing: 0.1rem;
@@ -29,8 +29,18 @@ h3 {
 }
 
 h4 {
-    font-family: schoolbell;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
+}
+
+h5, .cell-h5 {
+    font-family: GloriaHallelujah;
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+h6 {
+    font-family: DarumaDropOne;
+    font-size: 1.15rem;
     font-weight: bold;
 }
 
@@ -52,6 +62,7 @@ body {
 /***** SCROLLBAR  ******/
 html {
 	scroll-behavior: smooth;
+    min-height: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -69,7 +80,6 @@ html {
 /***** UTILITIES ******/
 body {
     min-width: 320px;
-    min-height: 100vh;
 }
 
 .flex-centered {
@@ -83,10 +93,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.desktop {
-    display: none;
 }
 
 /***** PAGE ******/
@@ -126,8 +132,22 @@ body {
     margin-left: 10px;
 }
 
+/* BOTTOM BUTTONS */
+.arrow-nav {
+    position: absolute;
+    bottom: 0;
+    margin: 30px 0;
+}
+
+.arrow-nav svg {
+    color: var(--royal-fuchsia);
+    font-size: 3rem;
+    margin: 0 10px;
+}
+
+
 /***** MAIN *****/
-main {
+#page-1, #page-2 {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -139,29 +159,31 @@ main {
     -webkit-box-shadow: inset 3px 3px 4px 0px var(--haiti), 4px 4px 5px 0px var(--haiti); 
     box-shadow: inset 3px 3px 4px 0px var(--haiti), 4px 4px 5px 0px var(--haiti);
     padding: 10px;
+    margin-bottom: 60px;
 }
 
-.banner {
-    width: calc(100% - 20px);
-    position: absolute;
-    z-index: 0;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-}
-
-#wrapper {
-    z-index: 10;
+#page-2 {
+    display: none;
 }
 
 /*** HEADER ***/
+header {
+    width: 100%;
+    margin-bottom: 10px;
+}
 /* TITLE */
 .cv-banner {
     justify-content: flex-end;
+    background-image: url("/assets/img/cv/cv-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
 }
 
 .cv-title {
     text-align: center;
     width: 100%;
+    /* z-index: 10; */
 }
 
 .cv-title h2 {
@@ -176,27 +198,6 @@ main {
     filter: drop-shadow(5px 5px 5px rgba(102, 51, 153, 0.25));
 }
 
-/* NAV */
-nav {
-    margin: 20px 0;
-}
-
-.cv-nav {
-    justify-content: space-evenly;
-}
-
-.cv-nav li {
-    cursor: pointer;
-    font-family: GloriaHallelujah;
-    font-weight: bold;
-}
-
-.cv-nav li svg {
-    font-size: 1.8rem;
-    color: var(--rebecca-purple);
-    margin: 10px 0;
-}
-
 /*** SECTIONS ***/
 section {
     width: 100%;
@@ -208,47 +209,141 @@ section {
 }
 
 #about p{
+    margin-bottom: 5px;
+}
+
+/* TRAINING */
+#training {
     margin-bottom: 10px;
 }
 
-/* SKILLS */
-#skills {
-    margin-bottom: 10px;
+.training-item {
+    margin: 10px 0;
 }
 
-#skills article {
-    margin-bottom: 10px;
-}
-
-#skills ul {
+.training-header {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    margin-bottom: 5px;
+}
+
+.training-header p {
+    font-family: GloriaHallelujah;
+}
+
+.training-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.training-title.left {
+    margin-right: 10%;
+    width: fit-content;
+    white-space: nowrap;
+}
+
+.training-title.right {
+    justify-content: space-between;
+}
+
+.training-date {
+    color: var(--royal-fuchsia);
+}
+
+/* PROJECTS */
+#projects {
+    margin-bottom: 10px;
+}
+
+.project-item {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+}
+
+.project-item h5 {
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.project-item svg {
+    color: var(--royal-fuchsia);
+    margin-left: 5px;
+}
+
+.project-item p {
+    margin-bottom: 5px;
+}
+
+.project-name {
+    display: flex;
     flex-wrap: wrap;
 }
 
-.ul-langages:before {
-    content: attr(aria-label);
-    padding-left: 5px;
+.project-link, .project-desc {
+    font-family: GloriaHallelujah;
 }
 
-#skills li {
-    padding: 5px;
+.project-link {
+    text-decoration: underline;
+    color: var(--royal-fuchsia);
+    display: block;
+    float: left;
 }
 
-#skills img {
-    width: 20px;
-    height: auto;
-    margin-right: 5px;
-}
-
-#skills em {
+.project-details a, .work-details a  {
+    color: var(--rebecca-purple);
+    text-decoration: underline;
     font-weight: bold;
+}
+
+.project-details em, .work-details em  {
+    color: var(--rebecca-purple);
+    font-weight: bold;
+}
+
+/* WORK EXPERIENCES */
+.work-item {
+    margin: 10px 0;
+}
+
+table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.left-col {
+    width: 40%;
+}
+
+th {
+    text-align: left;
+    vertical-align: top;
+}
+
+.work-name, .work-location{
+    padding-left: 20px;
+}
+
+.work-date {
+    color: var(--royal-fuchsia);
+}
+
+.work-details-list {
+    columns: 1;
+    -webkit-columns: 1;
+    -moz-columns: 1;
+}
+
+.work-details-list li{
+    list-style: disc inside;
 }
 
 /*** ASIDE ***/
 aside {
     width: 100%;
+    max-width: 340px;
 }
 
 aside article {
@@ -259,27 +354,40 @@ aside article {
     margin: 10px 0;
 }
 
-aside article h3 {
+aside article section {
+    margin: 10px 0;
+}
+
+aside article h4 {
     text-align: center;
     margin-bottom: 10px;
 }
 
-aside article h4 {
-    font-family: DarumaDropOne;
-    font-size: 1.1rem;
-    text-align: center;
-    margin-bottom: 10px;
+aside article h6 {
+    margin-bottom: 5px;
 }
 
 aside article li {
     padding: 5px;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
 }
 
 aside article svg {
     font-size: 1.2rem;
-    margin-right: 5px;
+    width: 20px;
+    margin-right: 10px;
     color: var(--rebecca-purple);
+}
+
+aside article img {
+    width: 20px;
+    height: auto;
+    margin-right: 5px; 
+}
+
+.links {
+    text-decoration: underline;
 }
 
 .li-diploma {
@@ -291,55 +399,49 @@ aside article svg {
     margin-left: 2px;
 }
 
-/* WORK EXPERIENCES */
-.li-title {
+.skill-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.job-date {
-    color: var(--royal-fuchsia);
+.skill-list li {
+    margin-right: 20px ;
 }
 
-.li-content div {
-    margin: 2px 0;
-}
-
-.job-title {
-    font-family: DarumaDropOne;
-}
-
-.job-employer {
-    font-family: GloriaHallelujah;
+.soft.skill-list li {
+    margin-right: 10px;
 }
 
 /***** RESPONSIVE *****/
 @media screen and (min-width: 768px) {
     /***** UTILITIES ******/
     h1, h2 {
-        font-size: 2.2rem;
+        font-size: 3rem;
     }
-    #about h3, #skills h3 {
-        font-size: 2rem;
+    h3 {
+        font-size: 2.25rem;
     }
     h4 {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
-    #about p, #skills li {
-        font-size: 1.2rem;
+    h5, .cell-h5, .project-link, .project-desc {
+        font-size: 1.25rem;
+    }
+    h6 {
+        font-size: 1.25rem;
+    }
+    #about p, #training p, #projects p, .work-experience p, .work-experience li {
+        font-size: 1.25rem;
+    }
+    .training-sub-title {
+        font-size: 1.15rem !important;
     }
     /***** HEADER *****/
     /* TITLE */
     .cv-banner img {
-        width: 175px;
-    }
-    /* NAV */
-    .cv-nav {
-        font-size: 1.2rem;
-    }
-
-    .cv-nav li svg {
-        font-size: 2.5rem;
+        width: 220px;
     }
     /***** SECTIONS *****/
     #cv-main {
@@ -349,11 +451,8 @@ aside article svg {
     #cv-content {
         margin-right: 10px;
     }
-    #skills article {
-        margin-bottom: 20px;
-    }
-    #skills img {
-        width: 25px;
+    .project-item h5 {
+        margin-right: 20px;
     }
     /* ASIDE */
     aside {
@@ -363,74 +462,18 @@ aside article svg {
 }
 
 @media screen and (min-width: 1024px) {
-    .desktop {
-        display: block;
-    }
     /***** MAIN *****/
-    main {
+    #page-1, #page-2 {
         padding: 30px;
-    }
-    .banner {
-        width: calc(100% - 60px);
-        position: absolute;
-        z-index: 0;
     }
     /***** SECTIONS *****/
     #cv-content {
         margin-right: 20px;
     }
-    /* ASIDE */
-    aside {
-        min-width: 365px;
-    }
-}
-
-@media screen and (min-width: 1380px) {
-    /***** UTILITIES ******/
-    h1, h2 {
-        font-size: 3rem;
-    }
-    #about h3, #skills h3 {
-        font-size: 2.2rem;
-    }
-    h4 {
-        font-size: 1.8rem;
-    }
-    #about p, #skills li {
-        font-size: 1.4rem;
-    }
-    /***** HEADER *****/
-    /* TITLE */
-    .cv-banner img {
-        width: 250px;
-    }
-    /* NAV */
-    .cv-nav {
-        font-size: 1.7rem;
-    }
-
-    .cv-nav li svg {
-        font-size: 3rem;
-    }
-    /***** SECTIONS *****/
-    #cv-content {
-        margin-right: 100px;
-    }
-    #skills li {
-        padding: 5px 10px;
-    }
-    #skills img {
-        width: 30px;
-    }
-    /* ASIDE */
-    aside article h3 {
-        font-size: 1.4rem;
-    }
-    aside article h4 {
-        font-size: 1.3rem;
-    }
-    aside article li {
-        font-size: 1.2rem;
+    .work-details-list {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
     }
 }
 
