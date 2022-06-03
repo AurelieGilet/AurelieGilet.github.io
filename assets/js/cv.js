@@ -11,6 +11,8 @@ leftArrow.addEventListener("click", () => {
     if (page1Display !== "flex") {
         page1.style.display = "flex";
         page2.style.display = "none";
+        rightArrow.getElementsByTagName("svg")[0].style.color = "var(--royal-fuchsia)";
+        leftArrow.getElementsByTagName("svg")[0].style.color = "var(--persian-pink)";
     }
 });
 
@@ -20,5 +22,7 @@ rightArrow.addEventListener("click", () => {
     if (page2Display !== "flex") {
         page2.style.display = "flex"
         page1.style.display = "none";
+        leftArrow.getElementsByTagName("svg")[0].style.color = "var(--royal-fuchsia)";
+        rightArrow.getElementsByTagName("svg")[0].style.color = "var(--persian-pink)";
     }
-})
+});
