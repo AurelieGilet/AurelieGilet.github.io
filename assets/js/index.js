@@ -236,6 +236,8 @@ function addModalEvents()  {
 
       // CLOSE PROJECT DETAILS MODAL
       const closeModalBtn = document.getElementById("close");
+      const projectModalWrapper = document.getElementById("project-wrapper");
+      const projectModal = document.getElementById("project-details");
 
       if (closeModalBtn) {
         closeModalBtn.addEventListener("click", function () {
@@ -243,7 +245,15 @@ function addModalEvents()  {
           modal.removeChild(modal.lastChild);
           HTMLBody[0].classList.remove("hide-scroll");
         });
-      }
+
+        projectModalWrapper.addEventListener("click", function (event) {
+          if (!projectModal.contains(event.target)) {
+            modal.style.display = "none";
+            modal.removeChild(modal.lastChild);
+            HTMLBody[0].classList.remove("hide-scroll");
+          }
+        });
+      }      
     });
   }
 }
