@@ -56,7 +56,7 @@ const charnetDeSante = new Project({
   ],
   technology: ["HTML5", "CSS3", "JAVASCRIPT", "SYMFONY", "PHP", "MYSQL"],
   tags: ["full-stack", "javascript", "php"],
-  website: "https://lecharnetdesante.life/",
+  website: "https://lecharnetdesante.fr/",
   github: "https://github.com/AurelieGilet/charnet-de-sante",
   images: [
     "/assets/img/projects/charnet-de-sante/charnet-de-sante-website.jpg",
