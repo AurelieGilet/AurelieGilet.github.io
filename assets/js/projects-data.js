@@ -19,7 +19,7 @@ const devQuiz = new Project({
     "Il a été développé sans aucun framework, en <em>PHP POO</em>, avec du <em>HTML</em> pour les templates, <em>SASS</em> pour le style et <em>JAVASCRIPT</em> pour les animations et requêtes Ajax",
   ],
   technology: ["PHP","HTML5", "SASS", "JAVASCRIPT"],
-  tags: ["fullstack", "php", "javascript"],
+  tags: ["full-stack", "php", "javascript"],
   website: "https://dev-quiz.infinityfreeapp.com/",
   github: "https://github.com/AurelieGilet/3wa_php_poo_quiz",
   images: [
