@@ -10,6 +10,52 @@ class Project {
   }
 }
 
+const devQuiz = new Project({
+  id: "devQuiz",
+  title: "Dev Quiz",
+  goal: "Projet de soutenance pour le titre professionnel Développeur intégrateur en réalisation d’applications web de la 3W Academy",
+  description: [
+    "Ce site propose des quiz sur différents langages de programmation. Chaque utilisateur possède un espace personnel avec le récap des scores réalisés dans les différents quiz.",
+    "Il a été développé sans aucun framework, en <em>PHP POO</em>, avec du <em>HTML</em> pour les templates, <em>SASS</em> pour le style et <em>JAVASCRIPT</em> pour les animations et requêtes Ajax",
+  ],
+  technology: ["PHP","HTML5", "SASS", "JAVASCRIPT"],
+  tags: ["fullstack", "php", "javascript"],
+  website: "https://dev-quiz.infinityfreeapp.com/",
+  github: "https://github.com/AurelieGilet/3wa_php_poo_quiz",
+  images: [
+    "/assets/img/projects/dev-quiz/devquiz-website.jpg",
+    "/assets/img/projects/dev-quiz/devquiz-website2.jpg",
+    "/assets/img/projects/dev-quiz/devquiz-website3.jpg",
+    "/assets/img/projects/dev-quiz/devquiz-website4.jpg",
+    "/assets/img/projects/dev-quiz/devquiz-website5.jpg",
+    "/assets/img/projects/dev-quiz/devquiz-website6.jpg",
+    "/assets/img/projects/dev-quiz/devquiz-website7.jpg",
+    "/assets/img/projects/dev-quiz/devquiz-mobile.jpg",
+    "/assets/img/projects/dev-quiz/devquiz-mobile2.jpg",
+    "/assets/img/projects/dev-quiz/devquiz-mobile3.jpg",
+    "/assets/img/projects/dev-quiz/devquiz-mobile4.jpg",
+    "/assets/img/projects/dev-quiz/devquiz-mobile5.jpg",
+    "/assets/img/projects/dev-quiz/devquiz-mobile6.jpg",
+    "/assets/img/projects/dev-quiz/devquiz-mobile7.jpg",
+  ],
+  altAttribute: [
+    "Image montrant l'accueil de la version desktop du site Dev Quiz",
+    "Image montrant le choix de type de joueur de la version desktop du site Dev Quiz",
+    "Image montrant l'écran d'accueil d'un joueur connecté de la version desktop du site Dev Quiz",
+    "Image montrant le choix des catégories de quiz de la version desktop du site Dev Quiz",
+    "Image montrant un exemple de question d'un quiz de la version desktop du site Dev Quiz",
+    "Image montrant un exemple de résultat d'un quiz de la version desktop du site Dev Quiz",
+    "Image montrant le récapitulatif des scores dans une catégorie de quiz de la version desktop du site Dev Quiz",
+    "Image montrant l'accueil de la version mobile du site Dev Quiz",
+    "Image montrant le choix de type de joueur de la version mobile du site Dev Quiz",
+    "Image montrant l'écran d'accueil d'un joueur connecté de la version mobile du site Dev Quiz",
+    "Image montrant le choix des catégories de quiz de la version mobile du site Dev Quiz",
+    "Image montrant un exemple de question d'un quiz de la version mobile du site Dev Quiz",
+    "Image montrant un exemple de résultat d'un quiz de la version mobile du site Dev Quiz",
+    "Image montrant le récapitulatif des scores dans une catégorie de quiz de la version mobile du site Dev Quiz",
+  ],
+});
+
 const portfolio = new Project({
   id: "portfolio",
   title: "Portfolio",
@@ -55,7 +101,7 @@ const charnetDeSante = new Project({
     "Ce projet a été développé avec le framework <em>SYMFONY</em> (v.5.3) et utilise <em>HTML5</em>, <em>TWIG</em>, <em>CSS3</em>, <em>JAVASCRIPT</em>, <em>PHP</em> et <em>MYSQL</em>.",
   ],
   technology: ["HTML5", "CSS3", "JAVASCRIPT", "SYMFONY", "PHP", "MYSQL"],
-  tags: ["full-stack", "javascript", "php"],
+  tags: ["full-stack", "php", "javascript"],
   website: "https://lecharnetdesante.fr/",
   github: "https://github.com/AurelieGilet/charnet-de-sante",
   images: [
